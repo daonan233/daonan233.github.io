@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    Daonan&#39;s Blog
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="道难">
+<meta name="description" content="Not interested in me at all.">
+<meta name="keywords" content="daonan">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://daonan233.github.io/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+    
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://daonan233.github.io">
+                    Daonan&#39;s Blog
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="https://daonan233.github.io">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="https://daonan233.github.io/archives">
+                        目录
+                    </a>
+                    
+                    <a class="menu-item" href="https://daonan233.github.io/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="https://daonan233.github.io/post/about">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1725950470196" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://daonan233.github.io">
+                            Daonan&#39;s Blog
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1725950470196" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="https://daonan233.github.io">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="https://daonan233.github.io/archives">
+                            目录
+                        </a>
+                        
+                        <a class="menu-item" href="https://daonan233.github.io/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="https://daonan233.github.io/post/about">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                About Me
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            Daonan's Blog
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2022-11-08</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">1.4
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">359</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://daonan233.github.io/tag/LhoOY8ka3/">personal</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://daonan233.github.io/post-images/hello-gridea.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <h1 id="欢迎来到道难daonan的个人博客">👏  欢迎来到道难（daonan）的个人博客 ！</h1>
+<h2 id="️-我会在这里记录一些关于我的想法笔记等等敬请期待">✍️  我会在这里记录一些关于我的想法，笔记等等，敬请期待！</h2>
+<h2 id="关于我">关于我👇</h2>
+<h3 id="主要学习经历">📝  主要学习经历</h3>
+<ul>
+<li>北京邮电大学 计算机学院（国家示范性软件学院） 软件工程 本科（2022~    ）</li>
+<li>北京邮电大学 信息与通信工程学院 信息与通信工程大类 本科（2021~2022）</li>
+</ul>
+<h3 id="代码相关">💻  代码相关</h3>
+<p>​- 熟悉HTML，CSS，JS，熟悉Vue.js，有独立开发H5网页的能力。</p>
+<ul>
+<li>熟悉Vue2/3（含uni-app），有多次开发网站、小程序的经历。</li>
+<li>使用过多种前端开源库，包括AntDesign、ElementPlus、ColorUI、BootStrap。</li>
+<li>使用过Git，有多次多人合作开发经验。了解Maven、Gradle的基本使用。</li>
+<li>了解Java、Python，使用过C++、Golang，有一定Java开发经验。</li>
+</ul>
+<h3 id="兴趣爱好">🌉  兴趣爱好</h3>
+<h4 id="游戏">游戏：</h4>
+<ul>
+<li>音乐游戏，举例：phigros，BangDream！，Muse Dash等。</li>
+<li>RPG游戏：举例：Fate/Grand Order，小众rpg游戏，使用过rpgmaker。</li>
+<li>FPS游戏，举例：OverWatch，CountStrike等。</li>
+</ul>
+<h4 id="音乐">音乐：</h4>
+<ul>
+<li>日vocaloid，以初音未来（Hatsune Miku）为主</li>
+<li>YOASOBI</li>
+<li>宇多田ヒカル</li>
+<li>Radwinps</li>
+<li>米津 玄師</li>
+<li>Roselia</li>
+<li>LiSA</li>
+</ul>
+<h4 id="绘画">绘画：</h4>
+<p>很菜，主要纸绘，尝试过板绘。</p>
+<p>​</p>
+<h4 id="旅游">旅游：</h4>
+<p>哪里都行，喜欢海边，不喜欢爬山</p>
+<h3 id="你可以在以下网页里找到我">🌎  你可以在以下网页里找到我</h3>
+<ul>
+<li>
+<p><a href="https://www.zhihu.com/people/dao-nan-46">知乎</a></p>
+</li>
+<li>
+<p><a href="https://space.bilibili.com/320342922">bilibili</a></p>
+</li>
+<li>
+<p><a href="https://github.com/daonan233">Github</a></p>
+</li>
+<li>
+<p><a href="https://gitee.com/daonan233">Gitee</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/DaoNan233?type=blog">CSDN</a></p>
+</li>
+</ul>
+<h3 id="联系方式">💬  联系方式</h3>
+<h4 id="可以通过以下邮箱联系我">可以通过以下邮箱联系我：</h4>
+<ul>
+<li>163邮箱：<a href="mailto:daonan55@163.com">daonan55@163.com</a></li>
+<li>谷歌邮箱：<a href="mailto:daonan233@gmail.com">daonan233@gmail.com</a></li>
+</ul>
+<br>
+<h3 id="欢迎你来到我的博客小站刚刚起步请多指教">😘欢迎你来到我的博客小站，刚刚起步，请多指教</h3>
+<br>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E9%81%93%E9%9A%BEdaonan%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">👏  欢迎来到道难（daonan）的个人博客 ！</a>
+<ul>
+<li><a href="#%EF%B8%8F-%E6%88%91%E4%BC%9A%E5%9C%A8%E8%BF%99%E9%87%8C%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84%E6%83%B3%E6%B3%95%E7%AC%94%E8%AE%B0%E7%AD%89%E7%AD%89%E6%95%AC%E8%AF%B7%E6%9C%9F%E5%BE%85">✍️  我会在这里记录一些关于我的想法，笔记等等，敬请期待！</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E6%88%91">关于我👇</a>
+<ul>
+<li><a href="#%E4%B8%BB%E8%A6%81%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86">📝  主要学习经历</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E7%9B%B8%E5%85%B3">💻  代码相关</a></li>
+<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">🌉  兴趣爱好</a>
+<ul>
+<li><a href="#%E6%B8%B8%E6%88%8F">游戏：</a></li>
+<li><a href="#%E9%9F%B3%E4%B9%90">音乐：</a></li>
+<li><a href="#%E7%BB%98%E7%94%BB">绘画：</a></li>
+<li><a href="#%E6%97%85%E6%B8%B8">旅游：</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%9C%A8%E4%BB%A5%E4%B8%8B%E7%BD%91%E9%A1%B5%E9%87%8C%E6%89%BE%E5%88%B0%E6%88%91">🌎  你可以在以下网页里找到我</a></li>
+<li><a href="#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">💬  联系方式</a>
+<ul>
+<li><a href="#%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E4%BB%A5%E4%B8%8B%E9%82%AE%E7%AE%B1%E8%81%94%E7%B3%BB%E6%88%91">可以通过以下邮箱联系我：</a></li>
+</ul>
+</li>
+<li><a href="#%E6%AC%A2%E8%BF%8E%E4%BD%A0%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B0%8F%E7%AB%99%E5%88%9A%E5%88%9A%E8%B5%B7%E6%AD%A5%E8%AF%B7%E5%A4%9A%E6%8C%87%E6%95%99">😘欢迎你来到我的博客小站，刚刚起步，请多指教</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>Daonan's Blog</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://daonan233.github.io/post/hello-gridea/">https://daonan233.github.io/post/hello-gridea/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://daonan233.github.io/post/hello-gridea/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://daonan233.github.io/post/hello-gridea/&sharesource=qzone&title=About Me&pics=https://daonan233.github.io/images/avatar.png?v=1725950470196&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://daonan233.github.io/post/hello-gridea/&sharesource=weibo&title=About Me + " - " + &pic="https://daonan233.github.io/images/avatar.png?v=1725950470196 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://daonan233.github.io/tag/LhoOY8ka3/">#
+                    personal
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://daonan233.github.io/post/rUrdPESWn/">
+                                                                                            数据结构笔记1: 时间、空间复杂度
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://daonan233.github.io/post/shi-yong-git-xiang-github-ke-long-ben-di-wen-jian-jia-de-fang-fa/">
+                                                                                                    使用git向github克隆本地文件夹的方法
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'VPcLZTgkIym7CxOpRsvIyYD2-gzGzoHsz',
+        appKey: 'MpnKiJiNadKbPehPQro9LXli',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '把你想说的话告诉daonan吧！',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        Daonan&#39;s Blog &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://github.com/daonan233" target="_blank">
+                                                DaoNan
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.5
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var music_array = [];
+                        
+                        music_array.push({
+                            name: 'Beautiful World',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFpmYkgxNUt0VHdZQ2VSP2U9ZG9EVUd0.mp3',
+                            artist: '宇多田ヒカル',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVo0WVJfQldJbGQ0M3VZP2U9NDUyZXVG.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'One Last Kiss',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVERyNkdqaGJNZmxXVzMzP2U9MnRTQUVy.mp3',
+                            artist: '宇多田ヒカル',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVo0WVJfQldJbGQ0M3VZP2U9NDUyZXVG.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'すずめ',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVGxJWFFLdkJMdmtjOFlCP2U9WHdZRWh2.mp3',
+                            artist: 'Radwinps、十明',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVY1VXd2ZUE3b25WaU5DP2U9V3oxbGFL.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'Grand Escape',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVEs2RXR1bTlfZWF0a0x6P2U9aXdsT3k0.mp3',
+                            artist: 'Radwinps、三浦透子',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVQ2QjFwMllVZXFPWlRoP2U9TVRZN0tJ.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '雪之泪 雨之音',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFBlZXVOSEVsVFZrNEcxP2U9RFFtMWoy.mp3',
+                            artist: '东京塔子',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUlvN1VpVFZOV2lodll0P2U9ZHhBOVBy.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '夜に駆ける',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFBlZXVOSEVsVFZrNEcxP2U9RFFtMWoy.mp3',
+                            artist: 'YOASOBI',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUlvN1VpVFZOV2lodll0P2U9ZHhBOVBy.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '群青',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVEgwSmdWZlJjRVd6Rm9iP2U9VHp2ZFJX.mp3',
+                            artist: 'YOASOBI',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUV1bFM4S0tvdEJuVG4xP2U9QkxJNXFF.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '怪物',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVGh2NkduVVNSMFc1bnZ2P2U9Q2EzUHdo.mp3',
+                            artist: 'YOASOBI',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUJvSUhNN3BFdWVHcUFrP2U9bU5va3lt.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'satisfaction',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnUzVaQjliUlJIeXc5Zl83P2U9Y01EY0dR.mp3',
+                            artist: '初音ミク/kz(livetune)',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVC1qX0xQQjFfTFVJcElJP2U9T2hoVlpD.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '夕日坂',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFYxcjh4TkhXcEdVbG4xP2U9WUczUHJI.mp3',
+                            artist: '初音ミク/doriko',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVDVyRFM3QTRUblpkNTEwP2U9aXBMODNt.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'アスノヨゾラ哨戒班',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnUzlDR3AxX3dNdHFrMDNzP2U9Y3RKQmtL.mp3',
+                            artist: 'Orangestar / IA',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVDIyX25INlZFODhzVHRrP2U9YVR0d2J4.png',
+                        });
+                        
+                        console.log(" MusicList: " + music_array);
+                        
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: music_array
+                        });
+                        
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1725950470196);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+                
+                    <div id="tp-weather-widget" style="background: #666;display: flex;"></div>
+                    <script>
+                        (function(T, h, i, n, k, P, a, g, e) {
+                            g = function() {
+                                P = h.createElement(i);
+                                a = h.getElementsByTagName(i)[0];
+                                P.src = k;
+                                P.charset = "utf-8";
+                                P.async = 1;
+                                a.parentNode.insertBefore(P, a)
+                            };
+                            T["ThinkPageWeatherWidgetObject"] = n;
+                            T[n] || (T[n] = function() {
+                                (T[n].q = T[n].q || []).push(arguments)
+                            });
+                            T[n].l = +new Date();
+                            if (T.attachEvent) {
+                                T.attachEvent("onload", g)
+                            } else {
+                                T.addEventListener("load", g, false)
+                            }
+                        }(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))
+                    </script>
+                    <script>
+                        var wearther_margin = "10px 10px";
+                        
+                        wearther_margin = "70px 5px";
+                        
+                        tpwidget("init", {
+                            "flavor": "bubble",
+                            "location": "WX4FBXXFKE4F",
+                            "geolocation": "enabled",
+                            "position": "bottom-left",
+                            "margin": wearther_margin,
+                            "language": "zh-chs",
+                            "unit": "c",
+                            "theme": "chameleon",
+                            "uid": "UFC977E1C7",
+                            "hash": "213ad798bc472dc365da3a9d4a9ff115"
+                        });
+                        tpwidget("show");
+                    </script>
+                    
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

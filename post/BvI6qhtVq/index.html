@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    Daonan&#39;s Blog
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="道难">
+<meta name="description" content="Not interested in me at all.">
+<meta name="keywords" content="daonan">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://daonan233.github.io/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+    
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://daonan233.github.io">
+                    Daonan&#39;s Blog
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="https://daonan233.github.io">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="https://daonan233.github.io/archives">
+                        目录
+                    </a>
+                    
+                    <a class="menu-item" href="https://daonan233.github.io/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="https://daonan233.github.io/post/about">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1725950470196" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://daonan233.github.io">
+                            Daonan&#39;s Blog
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1725950470196" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="https://daonan233.github.io">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="https://daonan233.github.io/archives">
+                            目录
+                        </a>
+                        
+                        <a class="menu-item" href="https://daonan233.github.io/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="https://daonan233.github.io/post/about">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                数据结构笔记3：栈和队
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            Daonan's Blog
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2022-11-11</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">3.8
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">1073</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://daonan233.github.io/tag/zgmGFhgCW/">data structure</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <h2 id="栈">栈</h2>
+<p><strong>1.定义：</strong><br>
+栈（Stack)是只允许仔一段进行插入或删除操作的线性表<br>
+逻辑结构与普通线性表相同<br>
+栈是后进先出的（LIFO）</p>
+<p><strong>2.几个术语</strong></p>
+<p>栈顶：允许插入和删除的一端<br>
+栈底：不允许插入和删除的一端</p>
+<p><strong>3.栈的基本操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135550639.png" alt="" loading="lazy"></p>
+<p>注意：GetTop只返回栈顶元素的值，Pop则是返回栈顶元素的值并删除他（出栈）</p>
+<p><strong>4.常考考题：</strong><br>
+已知进栈顺序，判断选项里哪种是合法的栈顺序<br>
+<img src="https://daonan233.github.io/post-images/1668135570595.png" alt="" loading="lazy"></p>
+<p>（略）<br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 顺序栈的实现
+**1.定义：**
+![](https://daonan233.github.io/post-images/1668135702781.png)
+用顺序存储方式实现的栈
+<p>声明一个SqStack s, 就会在内存里面分配空间</p>
+<p><strong>2.初始化操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135718761.png" alt="" loading="lazy"></p>
+<p>为什么要把栈顶指针设置为-1？<br>
+因为要让栈顶指针指向当前栈顶的位置，而栈空的时候没有元素，不能指在0的位置</p>
+<p><strong>3.入栈操作</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135733505.png" alt="" loading="lazy"></p>
+<p>注意不能写成top++！<br>
+当新元素的入栈之前，要让栈顶指针指向要入的位置</p>
+<p><strong>4.出栈操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135747448.png" alt="" loading="lazy"></p>
+<p>注意，这里写的就是top--。因为你要先删除才能指向当前新的栈顶。<br>
+（其实数据还残留在内存中，只是逻辑上被删除了）</p>
+<p><strong>5.读取栈顶元素：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135762189.png" alt="" loading="lazy"></p>
+<p>和pop的唯一区别就是 top指针不变</p>
+<p>P.S.当然 也有另外一种写法，就是栈顶指针指向栈顶元素的前一个。<br>
+那么就是 top++， --top，要注意审题哦</p>
+<p>栈满的时候，top==maxsize</p>
+<p>当然呢 也可以使用共享栈来提高空间利用率（略）<br>
+<img src="https://daonan233.github.io/post-images/1668135777208.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+<h2 id="链栈">链栈</h2>
+<p><strong>1.定义</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135874757.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+<h2 id="队列">队列</h2>
+<p><strong>1.定义：</strong><br>
+是只允许在一端进行插入，在另一端删除的线性表<br>
+队列的特点：先进先出(FIFO)</p>
+<p><strong>2.重要术语：</strong><br>
+队头：允许删除的一端<br>
+队尾：允许插入的一端<br>
+空队列</p>
+<p><strong>3.队列中的基本操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135970380.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 队列的顺序实现
+<p>** 1.队列的定义：**<br>
+<img src="https://daonan233.github.io/post-images/1668393267528.png" alt="" loading="lazy"></p>
+<p>这里的队尾指针指向队尾元素的后一个位置(下一个应该插入的位置）</p>
+<p><strong>2.队列的初始化</strong><br>
+<img src="https://daonan233.github.io/post-images/1668393273707.png" alt="" loading="lazy"></p>
+<p><strong>3.入队操作在（只能从队尾入队）：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668393280822.png" alt="" loading="lazy"></p>
+<p>啥时候队列已满？：<br>
+Q.front = maxsize-1</p>
+<p><strong>3.5循环队列：</strong></p>
+<figure data-type="image" tabindex="1"><img src="https://daonan233.github.io/post-images/1668393294868.png" alt="" loading="lazy"></figure>
+<p>效果图:<br>
+<img src="https://daonan233.github.io/post-images/1668393334536.png" alt="" loading="lazy"></p>
+<p>为什么空出来的地方不能再存储？因为这时候 rear指针就会指向front位置，那么就会满足“队列为空“的条件。<br>
+而开始的时候（即队列为空的时候），rear指针就是指向front的位置的。<br>
+所以循环队列最多能存储的数据个数为maxsize-1个<br>
+<img src="https://daonan233.github.io/post-images/1668393344910.png" alt="" loading="lazy"></p>
+<p>当然，也可以加一个int size来判断元素个数<br>
+或者加一个int tag (删除为0，插入为1），队满的条件为front<mark>rear&amp;&amp;tag</mark>1</p>
+<p><strong>总结</strong></p>
+<p><img src="https://daonan233.github.io/post-images/1668393351723.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 队列的链式实现
+<p><strong>1.定义方法</strong></p>
+<p><img src="https://daonan233.github.io/post-images/1668393588952.png" alt="" loading="lazy"><br>
+<strong>2.初始化：</strong></p>
+<p>1.带头结点的<br>
+<img src="https://daonan233.github.io/post-images/1668393642199.png" alt="" loading="lazy"></p>
+<p>2.不带头结点的<br>
+<img src="https://daonan233.github.io/post-images/1668393646616.png" alt="" loading="lazy"></p>
+<p><strong>3.入队：</strong></p>
+<p>1.（带头结点的）<br>
+<img src="https://daonan233.github.io/post-images/1668393655836.png" alt="" loading="lazy"></p>
+<p>2.（不带头结点的）<br>
+<img src="https://daonan233.github.io/post-images/1668393669800.png" alt="" loading="lazy"></p>
+<p>每次操作之后都要让rear指针指向新的表尾结点，第一次入队要改变队头指针指向头结点，后面就不用了</p>
+<p><strong>4.出队操作：</strong></p>
+<p>1.带头结点的<br>
+<img src="https://daonan233.github.io/post-images/1668393680500.png" alt="" loading="lazy"></p>
+<p>如果删除的是最后一个结点出队，那就还要让rear指针指向front（还原为空队列）</p>
+<p>2.不带头结点的：<br>
+<img src="https://daonan233.github.io/post-images/1668393689758.png" alt="" loading="lazy"></p>
+<p><strong>5.队列满的条件</strong><br>
+（一般不会队满）：不关心</p>
+<p><strong>6.最后还是注意一个点：</strong><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 双端队列
+<br>
+<br>
+___
+<br>
+<br>
+## 栈的应用：括号匹配
+<p>**碰到左括号就入栈，遇到右括号，就消耗一个左括号 **</p>
+<p>1.若遇到右括号的时候pop出的左括号不匹配时，就匹配失败了！<br>
+2.若处理完所有括号后，栈不为空，也匹配失败！<br>
+<img src="https://daonan233.github.io/post-images/1668393862378.png" alt="" loading="lazy"></p>
+<p><strong>算法实现:</strong><br>
+<img src="https://daonan233.github.io/post-images/1668393869370.png" alt="" loading="lazy"></p>
+<p>考试中可以直接使用基本操作，但是要简要说明接口是啥（写个注释。<br>
+（其实用链栈比较严谨，不会溢出。不过考试用顺序栈更简单）</p>
+<figure data-type="image" tabindex="2"><img src="https://daonan233.github.io/post-images/1668393876716.png" alt="" loading="lazy"></figure>
+<h2 id="递归的函数调用栈">递归的函数调用栈</h2>
+<figure data-type="image" tabindex="3"><img src="https://daonan233.github.io/post-images/1668393918367.png" alt="" loading="lazy"></figure>
+<h2 id="特殊矩阵的压缩存储">特殊矩阵的压缩存储</h2>
+<p><strong>对称矩阵的压缩存储：</strong></p>
+<p>1.行优先原则：</p>
+<p><img src="https://daonan233.github.io/post-images/1668394019756.png" alt="" loading="lazy"><br>
+注意，这里的矩阵是从1开始的，而数组从0开始</p>
+<p>列优先原则：<br>
+<img src="https://daonan233.github.io/post-images/1668394029923.png" alt="" loading="lazy"></p>
+<p><strong>三角矩阵的压缩存储：</strong><br>
+1.下三角矩阵<br>
+<img src="https://daonan233.github.io/post-images/1668394034782.png" alt="" loading="lazy"></p>
+<p>2.上三角矩阵</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%A0%88">栈</a></li>
+<li><a href="#%E9%93%BE%E6%A0%88">链栈</a></li>
+<li><a href="#%E9%98%9F%E5%88%97">队列</a></li>
+<li><a href="#%E9%80%92%E5%BD%92%E7%9A%84%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%A0%88">递归的函数调用栈</a></li>
+<li><a href="#%E7%89%B9%E6%AE%8A%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%AD%98%E5%82%A8">特殊矩阵的压缩存储</a></li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>Daonan's Blog</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://daonan233.github.io/post/BvI6qhtVq/">https://daonan233.github.io/post/BvI6qhtVq/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://daonan233.github.io/post/BvI6qhtVq/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://daonan233.github.io/post/BvI6qhtVq/&sharesource=qzone&title=数据结构笔记3：栈和队&pics=https://daonan233.github.io/images/avatar.png?v=1725950470196&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://daonan233.github.io/post/BvI6qhtVq/&sharesource=weibo&title=数据结构笔记3：栈和队 + " - " + &pic="https://daonan233.github.io/images/avatar.png?v=1725950470196 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://daonan233.github.io/tag/zgmGFhgCW/">#
+                    data structure
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://daonan233.github.io/post/gAGzadL2p/">
+                                                                                            数据结构笔记4：串
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://daonan233.github.io/post/dz6SR8bYk/">
+                                                                                                    数据结构笔记2：线性表
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'VPcLZTgkIym7CxOpRsvIyYD2-gzGzoHsz',
+        appKey: 'MpnKiJiNadKbPehPQro9LXli',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '把你想说的话告诉daonan吧！',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        Daonan&#39;s Blog &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://github.com/daonan233" target="_blank">
+                                                DaoNan
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.5
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var music_array = [];
+                        
+                        music_array.push({
+                            name: 'Beautiful World',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFpmYkgxNUt0VHdZQ2VSP2U9ZG9EVUd0.mp3',
+                            artist: '宇多田ヒカル',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVo0WVJfQldJbGQ0M3VZP2U9NDUyZXVG.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'One Last Kiss',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVERyNkdqaGJNZmxXVzMzP2U9MnRTQUVy.mp3',
+                            artist: '宇多田ヒカル',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVo0WVJfQldJbGQ0M3VZP2U9NDUyZXVG.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'すずめ',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVGxJWFFLdkJMdmtjOFlCP2U9WHdZRWh2.mp3',
+                            artist: 'Radwinps、十明',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVY1VXd2ZUE3b25WaU5DP2U9V3oxbGFL.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'Grand Escape',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVEs2RXR1bTlfZWF0a0x6P2U9aXdsT3k0.mp3',
+                            artist: 'Radwinps、三浦透子',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVQ2QjFwMllVZXFPWlRoP2U9TVRZN0tJ.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '雪之泪 雨之音',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFBlZXVOSEVsVFZrNEcxP2U9RFFtMWoy.mp3',
+                            artist: '东京塔子',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUlvN1VpVFZOV2lodll0P2U9ZHhBOVBy.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '夜に駆ける',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFBlZXVOSEVsVFZrNEcxP2U9RFFtMWoy.mp3',
+                            artist: 'YOASOBI',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUlvN1VpVFZOV2lodll0P2U9ZHhBOVBy.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '群青',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVEgwSmdWZlJjRVd6Rm9iP2U9VHp2ZFJX.mp3',
+                            artist: 'YOASOBI',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUV1bFM4S0tvdEJuVG4xP2U9QkxJNXFF.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '怪物',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVGh2NkduVVNSMFc1bnZ2P2U9Q2EzUHdo.mp3',
+                            artist: 'YOASOBI',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUJvSUhNN3BFdWVHcUFrP2U9bU5va3lt.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'satisfaction',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnUzVaQjliUlJIeXc5Zl83P2U9Y01EY0dR.mp3',
+                            artist: '初音ミク/kz(livetune)',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVC1qX0xQQjFfTFVJcElJP2U9T2hoVlpD.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '夕日坂',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFYxcjh4TkhXcEdVbG4xP2U9WUczUHJI.mp3',
+                            artist: '初音ミク/doriko',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVDVyRFM3QTRUblpkNTEwP2U9aXBMODNt.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'アスノヨゾラ哨戒班',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnUzlDR3AxX3dNdHFrMDNzP2U9Y3RKQmtL.mp3',
+                            artist: 'Orangestar / IA',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVDIyX25INlZFODhzVHRrP2U9YVR0d2J4.png',
+                        });
+                        
+                        console.log(" MusicList: " + music_array);
+                        
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: music_array
+                        });
+                        
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1725950470196);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+                
+                    <div id="tp-weather-widget" style="background: #666;display: flex;"></div>
+                    <script>
+                        (function(T, h, i, n, k, P, a, g, e) {
+                            g = function() {
+                                P = h.createElement(i);
+                                a = h.getElementsByTagName(i)[0];
+                                P.src = k;
+                                P.charset = "utf-8";
+                                P.async = 1;
+                                a.parentNode.insertBefore(P, a)
+                            };
+                            T["ThinkPageWeatherWidgetObject"] = n;
+                            T[n] || (T[n] = function() {
+                                (T[n].q = T[n].q || []).push(arguments)
+                            });
+                            T[n].l = +new Date();
+                            if (T.attachEvent) {
+                                T.attachEvent("onload", g)
+                            } else {
+                                T.addEventListener("load", g, false)
+                            }
+                        }(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))
+                    </script>
+                    <script>
+                        var wearther_margin = "10px 10px";
+                        
+                        wearther_margin = "70px 5px";
+                        
+                        tpwidget("init", {
+                            "flavor": "bubble",
+                            "location": "WX4FBXXFKE4F",
+                            "geolocation": "enabled",
+                            "position": "bottom-left",
+                            "margin": wearther_margin,
+                            "language": "zh-chs",
+                            "unit": "c",
+                            "theme": "chameleon",
+                            "uid": "UFC977E1C7",
+                            "hash": "213ad798bc472dc365da3a9d4a9ff115"
+                        });
+                        tpwidget("show");
+                    </script>
+                    
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
