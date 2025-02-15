@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://daonan233.github.io</id>
+    <title>Daonan&apos;s Blog</title>
+    <updated>2025-02-15T03:08:22.593Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://daonan233.github.io"/>
+    <link rel="self" href="https://daonan233.github.io/atom.xml"/>
+    <subtitle>根本对我兴趣全无啊</subtitle>
+    <logo>https://daonan233.github.io/images/avatar.png</logo>
+    <icon>https://daonan233.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, Daonan&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[算法回顾笔记]]></title>
+        <id>https://daonan233.github.io/post/uzexUFOT_L/</id>
+        <link href="https://daonan233.github.io/post/uzexUFOT_L/">
+        </link>
+        <updated>2025-02-15T02:15:32.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1bP411c7oJ/?spm_id_from=333.999.0.0&amp;vd_source=1fdd24a8b5cf89829b0ae5705060f0ed">来源：灵茶山艾府-基础算法精讲</a></p>
+<h3 id="01-两数之和三数之和">01 两数之和，三数之和</h3>
+<h4 id="1-两数之和">1、两数之和</h4>
+<figure data-type="image" tabindex="1"><img src="https://daonan233.github.io/post-images/1737039210980.png" alt="" loading="lazy"></figure>
+<ul>
+<li>
+<p>问题描述：在有序数组中找俩数（唯一）使得两数之和等于target</p>
+</li>
+<li>
+<p>问题思考：如果用暴力的话，时间复杂度为O(n²），现在我们要求用O(n)的方法去做，那么就想到利用原序列有序的这个条件（如果暴力就没用到，我随便一个序列也可以）</p>
+</li>
+<li>
+<p><em>（其实无序的话你开始排个序就好了）</em></p>
+</li>
+</ul>
+<p>利用<strong>有序</strong>，我们就可以发现可以去掉一些一定不符合的数字。比如最小的2+8&gt;9了，说明8跟谁都不能合成target9，所以去掉8，右指针向左移动。这时候我们再看第二大的6，第二大的6+2&lt;9，说明2跟谁都不能合成target了，所以去掉2，左指针向右移动。</p>
+<p>所以我们可以发现，这样就有一种双指针的方法，把最后的答案区间锁定在左右指针之间。（当前最小的数和当前最大的数加起来跟目标比一比）注意：只有有序的数组才能使用这个算法。</p>
+<ul>
+<li><strong>算法核心：</strong></li>
+</ul>
+<ol>
+<li>
+<p>while（left &lt; right)</p>
+</li>
+<li>
+<p>如果左右指针的数合起来刚好等于target，那就返回结果</p>
+</li>
+<li>
+<p>如果...大于target，那么右指针向左移动一格</p>
+</li>
+<li>
+<p>如果...小于target，那么左值真向左移动一格</p>
+</li>
+</ol>
+<h4 id="2-三数之和变异版两数之和">2、三数之和（变异版两数之和）</h4>
+<figure data-type="image" tabindex="2"><img src="https://daonan233.github.io/post-images/1737039321045.png" alt="" loading="lazy"></figure>
+<p>这个也要有序！所以一开始上来就给这个数组排序。</p>
+<p>这题其实也可以转化成两数之和，我们枚举nums[i]，然后让newTarget = target - nums[i] ，这样就变成了前面的n次的两数之和。</p>
+<p>然后题目要求要去除同样的三元组（比如如果有两个-1都满足，那么-1可能会出现两次）这种情况下不能去重（因为可能两个-1都要用到），那么怎么办呢？既然说三元组和组内的顺序不重要，那么我们就人为规定一个顺序（i&lt;j&lt;k)。然后如果下一个数字和当前这个数字是相同的，那么就跳过。</p>
+<figure data-type="image" tabindex="3"><img src="https://daonan233.github.io/post-images/1737039362307.png" alt="" loading="lazy"></figure>
+<h3 id="02-承最多水的容器-接雨水">02 承最多水的容器  接雨水</h3>
+<h4 id="11-承接最多水的容器">11、承接最多水的容器</h4>
+<figure data-type="image" tabindex="4"><img src="https://daonan233.github.io/post-images/1737039379929.png" alt="" loading="lazy"></figure>
+<ul>
+<li>问题描述：这就不描述了，看图就能理解。额外的提示是这题如果用n²会超时，所以肯定不能模拟啦</li>
+<li>问题思考：其实这题的想法还是双指针，左右指针向中间移动，哪条短就移动谁（不能让人家长的又变短宽度又变窄吧，那一定更小了），然后每次移动更新最大值。一样长就移动哪个都可以。</li>
+<li>每次花费O(1)的时间就去掉了一根线，所以总的时间复杂度是O(n)</li>
+</ul>
+<h4 id="42-接雨水">42、接雨水</h4>
+<figure data-type="image" tabindex="5"><img src="https://daonan233.github.io/post-images/1737039385230.png" alt="" loading="lazy"></figure>
+<p>问题描述：这个也没啥好说的</p>
+<p>问题思考：按单位来算，这个格子所能承的水，左边取决于左边的最大高度，右边取决于右边的最大高度，两个高度取最小值，然后减去这个位置的格子高度，就是这个位置所承接的水的数量</p>
+<p>算法：开两个额外数组，一个存最左边到i的最大高度（前缀最大值），一个存i到最右边的最大高度（后缀最大值）</p>
+<p>时间复杂度：都是一次遍历，所以O(n)</p>
+<p>优化：如果前缀最大值比后缀最大值小，那么这个位置能装的量就是前缀最大值，并且向右扩展；如果后缀最大值比前缀最大值小，那么这个位置能装的量就是后缀最大值，并且向左扩展（没太看懂）</p>
+<h3 id="03-滑动窗口问题">03 滑动窗口问题</h3>
+<h4 id="209-长度最小的子数组">209、长度最小的子数组</h4>
+<figure data-type="image" tabindex="6"><img src="https://daonan233.github.io/post-images/1739588516717.png" alt="" loading="lazy"></figure>
+<ul>
+<li>问题描述：一个正整数序列（非有序）和一个正整数target，在正整数序列中找出满足和≥target的连续子数组，并返回长度，没有返回0。</li>
+<li>问题思考：利用数组里面都是正整数的性质，保留上一次计算的结果，比如如果四个数大于target，那么五个数也会大于target。所以我们得到 一串大于等于target的时候，这时候我们让左端点向右移动来缩小，看缩小后还是不是大于target。所以我们就得到了一个方法：枚举右端点，缩小左端点，然后就能找到最小的数组了。</li>
+<li>时间复杂度：O(n)（为什么两层循环还是o(n)呢？因为其实左指针总共就动了n次，没有每次右指针向前他就从头开始，而是从当前位置继续）</li>
+</ul>
+<figure data-type="image" tabindex="7"><img src="https://daonan233.github.io/post-images/1739588642881.png" alt="" loading="lazy"></figure>
+<p>具体解释：还是设左右指针，for循环遍历右指针，然后要把当前遍历到的值新加到总和s里面去，left是不用更新的，然后开始向左移动，移动到刚好大于等于target就停止。（这边为什么14行要加1？自己假设一下left和right指向同一个，那么这时候长度是1）然后更新最小长度。最后判定一下最小长度如果大于n，那么就说明全部加起来都不到target，返回0.</p>
+<h3 id="04-二分查找-红蓝染色法">04 二分查找 红蓝染色法</h3>
+<h4 id="34-在排序数组中查找元素的第一个和最后一个位置">34、在排序数组中查找元素的第一个和最后一个位置</h4>
+<p>这边有个小例子，注意这里的左右边界（L、M）都是<strong>闭区间</strong>！所以更新的时候，<em>L=M+1，R=M-1</em>。不这么弄最后L=M没找到的时候和找到的时候都是一样的，会进入死循环。</p>
+<figure data-type="image" tabindex="8"><img src="https://daonan233.github.io/post-images/1739588684085.png" alt="" loading="lazy"></figure>
+<p>L-1指向的一定是红色，R+1指向的一定是蓝色</p>
+<figure data-type="image" tabindex="9"><img src="https://daonan233.github.io/post-images/1739588699873.png" alt="" loading="lazy"></figure>
+<p>如果没找到的话，L是会一直向右移动的，最后L等于数组长度（不用-1！）</p>
+<p>ps：这边（left+right)/2 在java和c++可能会有溢出的问题，改写成  <em>left + ( right - left ) / 2</em>，这其实就是个二分的问题。</p>
+<figure data-type="image" tabindex="10"><img src="https://daonan233.github.io/post-images/1739588719114.png" alt="" loading="lazy"></figure>
+<p>有＞、≥、＜、≤等多种考法，但是其实方法上是一样的：</p>
+<ul>
+<li>＞x等价于 ≥ x+1（对于整数来说）</li>
+<li>&lt; x等价于 ≥ x的那个数的左边</li>
+<li>≤ x等价于＞x的那个数的左边</li>
+</ul>
+<p>最后，让我们来看这道题：</p>
+<figure data-type="image" tabindex="11"><img src="https://daonan233.github.io/post-images/1739588738615.png" alt="" loading="lazy"></figure>
+<ul>
+<li>问题描述：给一个非递减<strong>整数</strong>数组，在数组里面找目标值的开始位置和结束位置，也就是找小于等于他和大于等于他位置。</li>
+<li>问题思路：已经全写上面了。</li>
+</ul>
+<h3 id="05-二分查找-数组峰值-搜索旋转排序数组">05 二分查找 数组峰值 搜索旋转排序数组</h3>
+<h4 id="162-寻找峰值">162、寻找峰值</h4>
+<figure data-type="image" tabindex="12"><img src="https://daonan233.github.io/post-images/1739588750674.png" alt="" loading="lazy"></figure>
+<ul>
+<li>问题描述：在一个整数数组里面找到一个数字比其左右相邻的数都大，这个数字就称为峰值元素。用o(logn)的时间找到任何一个峰值元素所在位置就行。</li>
+<li>问题思路：一样用二分的方法，说实话我没咋看懂啊，写当然我会写</li>
+</ul>
+<figure data-type="image" tabindex="13"><img src="https://daonan233.github.io/post-images/1739588762058.png" alt="" loading="lazy"></figure>
+<h4 id="153-寻找旋转排序数组中的最小值">153、寻找旋转排序数组中的最小值</h4>
+<figure data-type="image" tabindex="14"><img src="https://daonan233.github.io/post-images/1739588777420.png" alt="" loading="lazy"></figure>
+<h3 id="06-反转链表">06 反转链表</h3>
+<h4 id="206-反转链表">206、反转链表</h4>
+<p>要修改一个指针的指向，只用一个指针cur表示当前遍历到的节点是不够的，因为重新指完方向后，cur原本的next就找不到了。所以我们还需要一个nxt指针在重新指方向之前保存cur原来的next是谁。</p>
+<p>然后做法就是把cur更新成nxt，nxt更新成cur-&gt;next（新的cur）</p>
+<figure data-type="image" tabindex="15"><img src="https://daonan233.github.io/post-images/1739588797426.png" alt="" loading="lazy"></figure>
+<ul>
+<li>时间复杂度：O(n)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<h4 id="92-反转链表ii">92、反转链表II</h4>
+<p>除了整个链表反转的，也有部分链表反转的。这种问题在遇到一些特殊情况的时候，是要记得看第一个头节点要不要进行反转的。如果需要头节点一起反转的话，就设置一个dummyNode（哨兵节点）。</p>
+<figure data-type="image" tabindex="16"><img src="https://daonan233.github.io/post-images/1739588820852.png" alt="" loading="lazy"></figure>
+<h3 id="07-动态规划入门">07 动态规划入门</h3>
+<h4 id="198-打家劫舍">198、打家劫舍</h4>
+<figure data-type="image" tabindex="17"><img src="https://daonan233.github.io/post-images/1739588835071.png" alt="" loading="lazy"></figure>
+<ul>
+<li>
+<p>问题描述：小偷偷房子里的钱，两间相邻的房子都被偷了的情况下小偷就会被抓。已知每个房子的钱的数量数组，求小偷偷的钱最多能多少。</p>
+</li>
+<li>
+<p>问题思路：把一个大问题变成规模更小的子问题。从第一个房子或者最后一个房子开始思考（因为收到的约束最小），现在我们从最后一个房子开始考虑选或者不选。</p>
+<ol>
+<li>如果选，那么问题就变成n-1个房子的问题</li>
+<li>如果不选，那么问题就变成n-2个房子的问题（因为n-1就选不了了）</li>
+</ol>
+</li>
+</ul>
+<p>所以我们就可以抽象出来一个搜索树</p>
+<figure data-type="image" tabindex="18"><img src="https://daonan233.github.io/post-images/1739588857778.png" alt="" loading="lazy"></figure>
+<p>然后我们再抽象一下，写出递归公式</p>
+<figure data-type="image" tabindex="19"><img src="https://daonan233.github.io/post-images/1739588866366.png" alt="" loading="lazy"></figure>
+<p>dfs(i-1)就是第i个房子不选的情况，dfs(i-2)+nums[i]就是第i个房子选的情况。</p>
+<p>但是我们如果就这么简单写回溯代码的话，因为递归的时间是O(nlogn)，这么写会超时，所以我们需要进行简化（剪枝）。比如我们这边2-1-0-0的dfs(2)算了两遍，所以我们可以进行简化。</p>
+<p>怎么剪枝呢，我们可以创建一个memo数组或者哈希表。这样当我们计算到重复的值的时候，就可以直接返回memo里面保存的结果了。这样我们就成功把时间复杂度降低到了O(n)</p>
+<figure data-type="image" tabindex="20"><img src="https://daonan233.github.io/post-images/1739588877931.png" alt="" loading="lazy"></figure>
+<pre><code class="language-java">class Solution {
+    private int[] nums, memo;
+    public int rob(int[] nums) {
+        this.nums = nums;
+        int n = nums.length;
+        memo = new int[n];
+        Arrays.fill(memo, -1); // -1 表示没有计算过
+        return dfs(n - 1); // 从最后一个房子开始思考
+    }
+    // dfs(i) 表示从 nums[0] 到 nums[i] 最多能偷多少
+    private int dfs(int i) {
+        if (i &lt; 0) { // 递归边界（没有房子）
+            return 0;
+        }
+        if (memo[i] != -1) { // 之前计算过
+            return memo[i];
+        }
+        int res = Math.max(dfs(i - 1), dfs(i - 2) + nums[i]);
+        memo[i] = res; // 记忆化：保存计算结果
+        return res;
+    }
+}
+</code></pre>
+<p>这边时间复杂度怎么算呢，就是用状态个数乘上单个状态所需要的计算时间。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Java 数据结构及其方法]]></title>
+        <id>https://daonan233.github.io/post/yrURhD3Boc/</id>
+        <link href="https://daonan233.github.io/post/yrURhD3Boc/">
+        </link>
+        <updated>2025-02-06T15:59:15.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Shoulen/article/details/136768453">来源</a></p>
+<h3 id="1-数组">1. 数组</h3>
+<pre><code class="language-java">import java.util.Arrays
+</code></pre>
+<ol>
+<li>排序相关</li>
+</ol>
+<ul>
+<li><strong>Arrays.sort(arr) ：被优化后的快排，平均O(nlogn)，最坏O(n²)</strong></li>
+<li>Arrays.binarySearch(arr, target) ：arr是有序数组，二分查找target，返回索引；没找到返回一个负数</li>
+</ul>
+<ol start="2">
+<li>数组修改、比较相关</li>
+</ol>
+<ul>
+<li><strong>Arrays.equals(arr1,arr2)：比较两个数组是否完全相同，返回一个布尔值</strong></li>
+<li><strong>Arrays.fill(arr,val)：把整个数组的值设定为val</strong></li>
+<li><strong>Arrays.copyOf(oriArr,len)：把一个数组复制到另一个新的上，返回一个数组，len是新数组的长度。</strong></li>
+<li>Arrays.copyOfRange(oriArr,from,to)：同样是复制数组，从from的索引到to的索引。</li>
+<li>Arrays.toString(arr)：把一个数组以逗号分隔的形式转成一个字符串，返回这个String。</li>
+<li>Arrays.asList(arr)：把一个数组转换成一个List<T>集合，返回这个List。</li>
+</ul>
+<h3 id="2-字符串">2. 字符串</h3>
+<pre><code class="language-java">String str = new String();
+</code></pre>
+<p>我喜欢直接转成字符数组来使用，所以要用到的不是很多。</p>
+<ul>
+<li>str.toUpperCase()：把字符串转换为大写</li>
+<li>str.toLowerCase()：把字符串转换成小写</li>
+<li><strong>str.charAt(index)：返回index位置的字符，可以用来变成字符串数组</strong></li>
+</ul>
+<h3 id="3-动态数组arraylist">3. 动态数组（ArrayList）</h3>
+<pre><code class="language-java">import java.util.ArrayList;
+ArrayList&lt;Type&gt; arrayList= new ArrayList&lt;&gt;();
+//打印他也是直接sout就行
+System.out.println(ArrayList);
+</code></pre>
+<ul>
+<li><strong>add(element): 向ArrayList末尾添加元素</strong></li>
+<li>add(index, element): 在指定位置插入元素</li>
+<li><strong>get(index): 获取指定位置的元素</strong></li>
+<li>set(index, element): 替换指定位置的元素</li>
+<li>remove(index): 移除指定位置的元素</li>
+<li>remove(element): 移除指定元素</li>
+<li><strong>size(): 返回ArrayList中元素的个数</strong></li>
+<li>isEmpty(): 判断ArrayList是否为空</li>
+<li><strong>contains(element): 判断ArrayList是否包含指定元素</strong></li>
+<li>indexOf(element): 返回指定元素在ArrayList中第一次出现的位置</li>
+<li>clear(): 清空ArrayList中的所有元素</li>
+</ul>
+<h3 id="4-栈">4. 栈</h3>
+<pre><code class="language-java">import java.util.Stack;
+Stack&lt;T&gt; stack = new Stack&lt;&gt;();
+//输出直接sout就行
+System.out.println(stack);
+//输出结果：[Cat, Horse, Dog]
+</code></pre>
+<ul>
+<li><strong>push(E item): 将元素压入栈顶</strong></li>
+<li><strong>pop(): 弹出栈顶元素</strong></li>
+<li>peek(): 查看栈顶元素但不移除</li>
+<li>empty(): 判断栈是否为空</li>
+<li><strong>search(Object o): 查找元素在栈中的位置</strong></li>
+</ul>
+<h3 id="5-队列和双端队列queue-deque">5. 队列和双端队列（Queue &amp; Deque）</h3>
+<pre><code class="language-java">/*在常规队列中，元素是从后面添加的，而从前面删除的。但是，在双端队列中，我们可以从前后插入和删除元素。*/
+import java.util.ArrayDeque;//这一个就提供了所有Queue和Deque的接口
+Deque&lt;T&gt; deque = new ArrayDeque&lt;&gt;()
+//输出直接sout就行
+System.out.println(deque);
+//输出结果：[Dog, Horse, Cat]
+</code></pre>
+<ul>
+<li><strong>(deque.)addFirst(E item)：在双端队列开头插入指定元素</strong></li>
+<li><strong>addLast(E item)：在双端队列结尾插入指定元素（或者直接deque.add()也可以）</strong></li>
+<li><strong>getFirst()：返回双端队列第一个元素</strong></li>
+<li><strong>getLast()：返回双端队列最后一个元素</strong></li>
+<li><strong>removeFirst()：返回并删除第一个元素（等效于remove）</strong></li>
+<li><strong>removeLast()：返回并删除最后一个元素</strong></li>
+<li>remove(E item)：返回并在双端队列的头部删除指定元素</li>
+<li>clear()：删除所有元素</li>
+<li><strong>size()：返回双端队列长度</strong></li>
+<li><strong>contains(E item)：返回一个布尔值，双端队列里是否有这个元素</strong></li>
+</ul>
+<h3 id="6-哈希表">6. 哈希表</h3>
+<h4 id="hashset">HashSet</h4>
+<pre><code class="language-java">import java.util.HashSet;
+HashSet&lt;T&gt; hashSet = new HashSet&lt;&gt;();
+</code></pre>
+<ul>
+<li><strong>add(element)：向集合中添加元素</strong></li>
+<li><strong>remove(element)：从集合中移除指定元素</strong></li>
+<li><strong>contains(element)：判断集合中是否包含指定元素</strong></li>
+<li><strong>size()：返回集合中元素的个数</strong></li>
+<li>isEmpty()：判断集合是否为空</li>
+<li>clear()：清空集合中的所有元素</li>
+<li>iterator()：返回集合的迭代器，可以用于遍历集合中的元素</li>
+</ul>
+<h4 id="hashmap">HashMap</h4>
+<ul>
+<li>put(key, value): 将指定的键值对存储到HashMap中</li>
+<li>get(key): 返回与指定键关联的值</li>
+<li>getOrDefault(key, defaultValue): 获取指定键对应的值 如果该键不存在则返回一个默认值</li>
+<li>containsKey(key): 判断HashMap中是否包含指定的键</li>
+<li>containsValue(value): 判断HashMap中是否包含指定的值</li>
+<li>remove(key): 从HashMap中移除指定键及其关联的值</li>
+<li>size(): 返回HashMap中键值对的个数</li>
+<li>isEmpty(): 判断HashMap是否为空</li>
+<li>clear(): 清空HashMap中的所有键值对</li>
+<li>keySet(): 返回HashMap中所有键的集合</li>
+<li>values(): 返回HashMap中所有值的集合</li>
+<li>entrySet(): 返回HashMap中所有键值对的集合</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SpringBoot 1.入门案例分析]]></title>
+        <id>https://daonan233.github.io/post/HM7jpvnA1/</id>
+        <link href="https://daonan233.github.io/post/HM7jpvnA1/">
+        </link>
+        <updated>2023-02-08T16:23:26.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="springboot-2-开发">SpringBoot 2 开发</h2>
+<p>0.<strong>SpringBoot</strong>简介：由Pivotal团队提供的全新框架，其目的是用来<strong>简化</strong>Spring应用的<strong>初始搭建</strong>以及<strong>开发过程</strong></p>
+<p>优点：</p>
+<ul>
+<li>起步依赖（简化依赖配置）</li>
+<li>自动配置（简化常用工程相关配置）</li>
+<li>辅助功能（内置服务器等）</li>
+</ul>
+<h3 id="1-入门案例解析parent">1. 入门案例解析：parent</h3>
+<figure data-type="image" tabindex="1"><img src="https://daonan233.github.io/post-images/1675873543468.png" alt="" loading="lazy"></figure>
+<p>这个意思是什么呢，就是只要在pom.xml文件里面写了groupId和artifactId就可以了。SpringBoot已经把这些版本坐标给我们管理好了（depencyManagement定义了一系列的依赖管理）。</p>
+<h4 id="总结">总结：</h4>
+<ol>
+<li>开发SpringBoot程序要继承spring-boot-starter-parent</li>
+<li>spring-boot-starter-parent中定义了若干个依赖管理</li>
+<li>继承parent模块可以<strong>避免</strong>多个依赖使用相同技术时<strong>出现依赖版本冲突</strong></li>
+<li>继承parent的形式也可以采用引入依赖的形式实现效果</li>
+</ol>
+<h3 id="2-入门案例解析starter">2. 入门案例解析：starter</h3>
+<p>SpringBoot中常见项目名称，定义了当前项目使用的所有依赖坐标，以达到<strong>减少依赖配置</strong>的目的</p>
+<h4 id="在实际开发中">在实际开发中</h4>
+<ul>
+<li>使用任意坐标时，仅书写GAV中的G和A，V由SpringBoot提供，除非SpringBoot未提供对应版本V</li>
+<li>如果发生坐标错误，再指定Version（小心版本冲突）</li>
+</ul>
+<h3 id="3入门案例分析引导类">3.入门案例分析：引导类</h3>
+<figure data-type="image" tabindex="2"><img src="https://daonan233.github.io/post-images/1675873552988.png" alt="" loading="lazy"></figure>
+<h3 id="4入门案例分析tomcat">4.入门案例分析：tomcat</h3>
+<p><exclusion>里面放GA</exclusion>，就可以排除一个依赖(groupId&amp;artifactId)</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生活记录3]]></title>
+        <id>https://daonan233.github.io/post/_wfYsAJnO/</id>
+        <link href="https://daonan233.github.io/post/_wfYsAJnO/">
+        </link>
+        <updated>2023-01-13T17:02:21.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="发一发我之前高中画的画把他们扫描起来咯">发一发我之前高中画的画，把他们扫描起来咯。🎨</h2>
+<p>（有一些不能放上来哈哈🤗）</p>
+<p><img src="https://daonan233.github.io/post-images/1673630076143.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630082698.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630117748.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630127591.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630131080.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630142481.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630147745.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630152111.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630157074.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630162998.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1673630167855.png" alt="" loading="lazy"></p>
+<hr>
+<h2 id="ps">ps：</h2>
+<p>前一段时间阳了，没什么症状鸭，在家里隔离了一周。闷得慌！还不能洗澡555</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生活记录2]]></title>
+        <id>https://daonan233.github.io/post/ulq9N1zX3/</id>
+        <link href="https://daonan233.github.io/post/ulq9N1zX3/">
+        </link>
+        <updated>2022-12-01T09:17:43.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="这几天是北邮的离校返乡日">这几天是北邮的离校返乡日📅</h2>
+<p>发现北邮每次返校和离校都刚好碰上疫情爆发，而且每次都比其他学校慢一截。这次的防控只能说做的不好不坏，很明显北邮是想放大家回去的，只要阴性就给解封，导员也在催学生回去。<br>
+<br><br>
+我本来预定的是周三中午的飞机，所以打算早上八点半起床⏰。结果早上七点接到了昨晚已经去机场的女朋友的电话，然后七点半跟我一起去的哥们也来宿舍催我快走。这下才知道自己所在的楼出阳性了（2333我还是宿舍层长，直接跑路了）<br>
+<br><br>
+当网约车载着我们离开北邮的时候，我才松一口气：不用在北邮包饺砸过大年了。🤣本来要跟我们同车的学姐所在楼层被封控了出不来，后来周三晚上解除隔离就去北京南站过夜了。<br>
+<img src="https://daonan233.github.io/post-images/1669886882055.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1669886865489.png" alt="" loading="lazy"><br>
+<br></p>
+<h2 id="回家咯">回家咯</h2>
+<br>
+回家后就是五天绿码居家隔离，相比之前舍友的红码+集中隔离感觉好多了。。福建的防疫政策果然很摆。😶
+<br>
+家里还新买了一个按摩椅，很贵！但是很爽！🤗 嘿嘿嘿。
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生活记录1]]></title>
+        <id>https://daonan233.github.io/post/evJKClmXM/</id>
+        <link href="https://daonan233.github.io/post/evJKClmXM/">
+        </link>
+        <updated>2022-11-14T03:18:38.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="买了个便携屏">买了个便携屏：</h2>
+<h2 id="先说来源">先说来源💡</h2>
+<p><strong>💻配置：15.6 + 4K + 60hz</strong><br>
+  从福建群友那里400r买来的，是个裸屏（感觉好容易坏啊qwq，特别是下面的那块包起来的电路板），这个开关的大小不太好找到配套的diy外壳<br>
+  我不太懂这方面的价格啊，但是看相似配置的都要贵不少，所以性价比还是很高了，4k的效果也很好。感谢这位朋友（小钻石💎）<br>
+  估计这玩意就放学校了，有可能今年春节带回家里去自己动手搞个壳，然后再放来学校吧。</p>
+<h2 id="看看你的">看看你的👀</h2>
+<p><strong>正面：（和一些其他的设备🤤）</strong><br>
+<img src="https://daonan233.github.io/post-images/1668396478813.jpg" alt="" loading="lazy"><br>
+<strong>背面：（叙利亚战损版😭）</strong><br>
+<img src="https://daonan233.github.io/post-images/1668396499372.jpg" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+<h2 id="初冬的随拍">初冬的随拍📷</h2>
+<p><img src="https://daonan233.github.io/post-images/1668397356897.jpg" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668397373572.jpg" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668397484649.jpg" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668397491251.jpg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据结构笔记5：树]]></title>
+        <id>https://daonan233.github.io/post/zUr2aaGie/</id>
+        <link href="https://daonan233.github.io/post/zUr2aaGie/">
+        </link>
+        <updated>2022-11-11T03:09:15.000Z</updated>
+        <content type="html"><![CDATA[<p>后面填坑。。。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据结构笔记4：串]]></title>
+        <id>https://daonan233.github.io/post/gAGzadL2p/</id>
+        <link href="https://daonan233.github.io/post/gAGzadL2p/">
+        </link>
+        <updated>2022-11-11T03:08:16.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="串">串</h2>
+<p><strong>1.定义：</strong><br>
+即字符串(String)，是由零个或多个字符组成的有限序列，一般记为S=‘a1a2a3…an' (n&gt;=0)<br>
+<img src="https://daonan233.github.io/post-images/1668394325864.png" alt="" loading="lazy"></p>
+<p>1.（位序从1开始而不是0！）<br>
+2.空串：长度为0（即不含任何字符）的串<br>
+3.空格串：由空格组成的非空串</p>
+<p><strong>2.串的基本操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668394341107.png" alt="" loading="lazy"></p>
+<p>常考的：</p>
+<pre><code>Concat（&amp;T,S1,S2)
+SubString(&amp;Sub,S,pos,len)，pos为1开始
+StrCompare(S,T)
+Index(S,T)
+</code></pre>
+<p><strong>总结：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668394346943.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 串的存储结构
+**1.顺序存储结构定义：**
+<p>1.静态数组（不可变的）<br>
+<img src="https://daonan233.github.io/post-images/1668395109949.png" alt="" loading="lazy"></p>
+<p>2.动态数组（堆分配存储）<br>
+<img src="https://daonan233.github.io/post-images/1668395113953.png" alt="" loading="lazy"></p>
+<p>注意：ch[0]存储数组长度<br>
+<img src="https://daonan233.github.io/post-images/1668395120948.png" alt="" loading="lazy"></p>
+<p>教材使用的是，首位置废弃不用，但是同样记yigelength（若放在ch[0]只能存储到255</p>
+<p><strong>2.链式存储结构定义：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668395138384.png" alt="" loading="lazy"></p>
+<p><strong>3.串的一些基本操作的实现：（基于顺序定长存储）</strong></p>
+<p>1.返回某位置后面的定长子串SubString(&amp;Sub,S,pos,len) ，用Sub返回</p>
+<p><img src="https://daonan233.github.io/post-images/1668395152177.png" alt="" loading="lazy"><br>
+2.比较操作(S,T)<br>
+<img src="https://daonan233.github.io/post-images/1668395160454.png" alt="" loading="lazy"></p>
+<p>3.定位操作Index(S,T)<br>
+<img src="https://daonan233.github.io/post-images/1668395166169.png" alt="" loading="lazy"></p>
+<p><strong>总结：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668395170185.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 串的模式匹配
+**1.定义：**
+再主串找到与模式串相同的子串，并返回他的位置
+<p><strong>朴素的模式匹配算法：狠狠的暴力！</strong></p>
+<p>若模式串的长度为m，主串长度为n，则<br>
+1.<br>
+匹配成功的最好时间复杂度为O（m）<br>
+匹配失败的最好时间复杂度：O（n-m+1) =O(n-m)≈O（n）</p>
+<ol start="2">
+<li></li>
+</ol>
+<p><img src="https://daonan233.github.io/post-images/1668395275976.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## KMP算法
+**1.算法进入**
+![](https://daonan233.github.io/post-images/1668395425197.png)
+从主串第一个开始，如果l后面不是e，那么也不用回溯了，因为我们知道主串第二个也不会符合模式串第一个。后面几个也同理
+所以 我们就直接从l后面开始！
+——>如果j=k的时候才发现匹配失败，说明1~k-1都匹配成功
+<p>意思就是 ：如果到最后一个才发现错了<br>
+对于主串，就算不匹配了，指针也不回溯！<br>
+对于子串，指针则要返回到串首，狠狠的回溯！</p>
+<p>算法实现：<br>
+<img src="https://daonan233.github.io/post-images/1668395438158.png" alt="" loading="lazy"></p>
+<p><strong>重点来力！如何构造next数组!</strong></p>
+<p>两个例子：<br>
+<img src="https://daonan233.github.io/post-images/1668395446965.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668395451332.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668395455735.png" alt="" loading="lazy"></p>
+<p><strong>练习：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668395466827.png" alt="" loading="lazy"></p>
+<p>这里，特别的，next[1]=0,next[2]=1;</p>
+<p>然后就是对比前缀的子串和后缀的子串最多能相同的个数</p>
+<p>比如上面的第六个，它前面的为ababa，<br>
+那么前缀就是abab及其子串，后缀就是baba及其子串<br>
+那么当前缀的字串为aba，后缀字串为aba的时候， 一样的最多为3个<br>
+所以，3+1=4</p>
+<p><strong>最终，我们的求next数组和KMP算法是这样的！</strong><br>
+<img src="https://daonan233.github.io/post-images/1668395496564.png" alt="" loading="lazy"></p>
+<p><strong>总结：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668395502131.png" alt="" loading="lazy"></p>
+<p><strong>还有一种 优化的KMP算法（把next数组优化成nextval数组，减少了几次无用的判断）</strong><br>
+<img src="https://daonan233.github.io/post-images/1668395530012.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据结构笔记3：栈和队]]></title>
+        <id>https://daonan233.github.io/post/BvI6qhtVq/</id>
+        <link href="https://daonan233.github.io/post/BvI6qhtVq/">
+        </link>
+        <updated>2022-11-11T02:56:37.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="栈">栈</h2>
+<p><strong>1.定义：</strong><br>
+栈（Stack)是只允许仔一段进行插入或删除操作的线性表<br>
+逻辑结构与普通线性表相同<br>
+栈是后进先出的（LIFO）</p>
+<p><strong>2.几个术语</strong></p>
+<p>栈顶：允许插入和删除的一端<br>
+栈底：不允许插入和删除的一端</p>
+<p><strong>3.栈的基本操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135550639.png" alt="" loading="lazy"></p>
+<p>注意：GetTop只返回栈顶元素的值，Pop则是返回栈顶元素的值并删除他（出栈）</p>
+<p><strong>4.常考考题：</strong><br>
+已知进栈顺序，判断选项里哪种是合法的栈顺序<br>
+<img src="https://daonan233.github.io/post-images/1668135570595.png" alt="" loading="lazy"></p>
+<p>（略）<br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 顺序栈的实现
+**1.定义：**
+![](https://daonan233.github.io/post-images/1668135702781.png)
+用顺序存储方式实现的栈
+<p>声明一个SqStack s, 就会在内存里面分配空间</p>
+<p><strong>2.初始化操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135718761.png" alt="" loading="lazy"></p>
+<p>为什么要把栈顶指针设置为-1？<br>
+因为要让栈顶指针指向当前栈顶的位置，而栈空的时候没有元素，不能指在0的位置</p>
+<p><strong>3.入栈操作</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135733505.png" alt="" loading="lazy"></p>
+<p>注意不能写成top++！<br>
+当新元素的入栈之前，要让栈顶指针指向要入的位置</p>
+<p><strong>4.出栈操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135747448.png" alt="" loading="lazy"></p>
+<p>注意，这里写的就是top--。因为你要先删除才能指向当前新的栈顶。<br>
+（其实数据还残留在内存中，只是逻辑上被删除了）</p>
+<p><strong>5.读取栈顶元素：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135762189.png" alt="" loading="lazy"></p>
+<p>和pop的唯一区别就是 top指针不变</p>
+<p>P.S.当然 也有另外一种写法，就是栈顶指针指向栈顶元素的前一个。<br>
+那么就是 top++， --top，要注意审题哦</p>
+<p>栈满的时候，top==maxsize</p>
+<p>当然呢 也可以使用共享栈来提高空间利用率（略）<br>
+<img src="https://daonan233.github.io/post-images/1668135777208.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+<h2 id="链栈">链栈</h2>
+<p><strong>1.定义</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135874757.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+<h2 id="队列">队列</h2>
+<p><strong>1.定义：</strong><br>
+是只允许在一端进行插入，在另一端删除的线性表<br>
+队列的特点：先进先出(FIFO)</p>
+<p><strong>2.重要术语：</strong><br>
+队头：允许删除的一端<br>
+队尾：允许插入的一端<br>
+空队列</p>
+<p><strong>3.队列中的基本操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668135970380.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 队列的顺序实现
+<p>** 1.队列的定义：**<br>
+<img src="https://daonan233.github.io/post-images/1668393267528.png" alt="" loading="lazy"></p>
+<p>这里的队尾指针指向队尾元素的后一个位置(下一个应该插入的位置）</p>
+<p><strong>2.队列的初始化</strong><br>
+<img src="https://daonan233.github.io/post-images/1668393273707.png" alt="" loading="lazy"></p>
+<p><strong>3.入队操作在（只能从队尾入队）：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668393280822.png" alt="" loading="lazy"></p>
+<p>啥时候队列已满？：<br>
+Q.front = maxsize-1</p>
+<p><strong>3.5循环队列：</strong></p>
+<figure data-type="image" tabindex="1"><img src="https://daonan233.github.io/post-images/1668393294868.png" alt="" loading="lazy"></figure>
+<p>效果图:<br>
+<img src="https://daonan233.github.io/post-images/1668393334536.png" alt="" loading="lazy"></p>
+<p>为什么空出来的地方不能再存储？因为这时候 rear指针就会指向front位置，那么就会满足“队列为空“的条件。<br>
+而开始的时候（即队列为空的时候），rear指针就是指向front的位置的。<br>
+所以循环队列最多能存储的数据个数为maxsize-1个<br>
+<img src="https://daonan233.github.io/post-images/1668393344910.png" alt="" loading="lazy"></p>
+<p>当然，也可以加一个int size来判断元素个数<br>
+或者加一个int tag (删除为0，插入为1），队满的条件为front<mark>rear&amp;&amp;tag</mark>1</p>
+<p><strong>总结</strong></p>
+<p><img src="https://daonan233.github.io/post-images/1668393351723.png" alt="" loading="lazy"><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 队列的链式实现
+<p><strong>1.定义方法</strong></p>
+<p><img src="https://daonan233.github.io/post-images/1668393588952.png" alt="" loading="lazy"><br>
+<strong>2.初始化：</strong></p>
+<p>1.带头结点的<br>
+<img src="https://daonan233.github.io/post-images/1668393642199.png" alt="" loading="lazy"></p>
+<p>2.不带头结点的<br>
+<img src="https://daonan233.github.io/post-images/1668393646616.png" alt="" loading="lazy"></p>
+<p><strong>3.入队：</strong></p>
+<p>1.（带头结点的）<br>
+<img src="https://daonan233.github.io/post-images/1668393655836.png" alt="" loading="lazy"></p>
+<p>2.（不带头结点的）<br>
+<img src="https://daonan233.github.io/post-images/1668393669800.png" alt="" loading="lazy"></p>
+<p>每次操作之后都要让rear指针指向新的表尾结点，第一次入队要改变队头指针指向头结点，后面就不用了</p>
+<p><strong>4.出队操作：</strong></p>
+<p>1.带头结点的<br>
+<img src="https://daonan233.github.io/post-images/1668393680500.png" alt="" loading="lazy"></p>
+<p>如果删除的是最后一个结点出队，那就还要让rear指针指向front（还原为空队列）</p>
+<p>2.不带头结点的：<br>
+<img src="https://daonan233.github.io/post-images/1668393689758.png" alt="" loading="lazy"></p>
+<p><strong>5.队列满的条件</strong><br>
+（一般不会队满）：不关心</p>
+<p><strong>6.最后还是注意一个点：</strong><br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+## 双端队列
+<br>
+<br>
+___
+<br>
+<br>
+## 栈的应用：括号匹配
+<p>**碰到左括号就入栈，遇到右括号，就消耗一个左括号 **</p>
+<p>1.若遇到右括号的时候pop出的左括号不匹配时，就匹配失败了！<br>
+2.若处理完所有括号后，栈不为空，也匹配失败！<br>
+<img src="https://daonan233.github.io/post-images/1668393862378.png" alt="" loading="lazy"></p>
+<p><strong>算法实现:</strong><br>
+<img src="https://daonan233.github.io/post-images/1668393869370.png" alt="" loading="lazy"></p>
+<p>考试中可以直接使用基本操作，但是要简要说明接口是啥（写个注释。<br>
+（其实用链栈比较严谨，不会溢出。不过考试用顺序栈更简单）</p>
+<figure data-type="image" tabindex="2"><img src="https://daonan233.github.io/post-images/1668393876716.png" alt="" loading="lazy"></figure>
+<h2 id="递归的函数调用栈">递归的函数调用栈</h2>
+<figure data-type="image" tabindex="3"><img src="https://daonan233.github.io/post-images/1668393918367.png" alt="" loading="lazy"></figure>
+<h2 id="特殊矩阵的压缩存储">特殊矩阵的压缩存储</h2>
+<p><strong>对称矩阵的压缩存储：</strong></p>
+<p>1.行优先原则：</p>
+<p><img src="https://daonan233.github.io/post-images/1668394019756.png" alt="" loading="lazy"><br>
+注意，这里的矩阵是从1开始的，而数组从0开始</p>
+<p>列优先原则：<br>
+<img src="https://daonan233.github.io/post-images/1668394029923.png" alt="" loading="lazy"></p>
+<p><strong>三角矩阵的压缩存储：</strong><br>
+1.下三角矩阵<br>
+<img src="https://daonan233.github.io/post-images/1668394034782.png" alt="" loading="lazy"></p>
+<p>2.上三角矩阵</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据结构笔记2：线性表]]></title>
+        <id>https://daonan233.github.io/post/dz6SR8bYk/</id>
+        <link href="https://daonan233.github.io/post/dz6SR8bYk/">
+        </link>
+        <updated>2022-11-11T02:12:56.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="线性表linear-list">线性表（Linear List）</h2>
+<br>
+**1.线性表的定义**
+![](https://daonan233.github.io/post-images/1668133018554.png)
+<p>几个性质：<br>
+1.逻辑结构，每个元素都是一样的数据类型<br>
+2.每个数据元素占空间一样大<br>
+3.有次序</p>
+<hr>
+<h2 id="线性表的初始操作">线性表的初始操作</h2>
+<p>  总结：创销、增删改查<br>
+1.InitList(&amp;L)：初始化表。构造一个空的线性表L，分配内存空间<br>
+2.DestroyList(&amp;L) ：销毁操作。销毁线性表，并释放线性表L所占用的内存空间<br>
+3.ListInsert(&amp;L,i,e)：插入操作。在表L的第i个位置上插入指定元素e<br>
+4.ListDelete（&amp;L,I,&amp;e)：删除操作。删除表L中第i个位置的元素，并用e<br>
+返回删除元素的值。<br>
+5.LocateElem(L,e)：按值查找操作。在表L中查找具有给定关键字值的元素。<br>
+6.GetElem(L,i)：按位查找操作。获取表L中第i个位置的元素的值</p>
+<p>ps：什么时候要传入参数的引用“&amp;&quot;----对参数的修改结果需要”带回来“<br>
+<img src="https://daonan233.github.io/post-images/1668133280039.png" alt="" loading="lazy"></p>
+<p>（调用带有&amp;传引用的函数时，原来的值就会被改变，即”被带回来“</p>
+<ol start="7">
+<li></li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://daonan233.github.io/post-images/1668133298655.png" alt="" loading="lazy"></figure>
+<hr>
+<h2 id="顺序表的定义">顺序表的定义</h2>
+<p><strong>定义：用顺序存储的方式实现线性表</strong><br>
+顺序存储：把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的临接关系来体现</p>
+<p><strong>1.顺序表的实现——静态分配</strong><br>
+<img src="https://daonan233.github.io/post-images/1668133394995.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668133416864.png" alt="" loading="lazy"><br>
+所以我们就需要：</p>
+<p><strong>2.顺序表的实现——动态分配</strong><br>
+<img src="https://daonan233.github.io/post-images/1668133447763.png" alt="" loading="lazy"><br>
+Key:动态申请和释放内存空间：<br>
+C——malloc 、 free函数</p>
+<p><strong>顺序表的基本操作：插入（以静态分配为例子）</strong><br>
+<img src="https://daonan233.github.io/post-images/1668133475718.png" alt="" loading="lazy"></p>
+<p>两个步骤：1.   i 位置以及其后面的每个都往后移动一位(循环）<br>
+2.将第 i 个位置的值赋为e<br>
+ps:要给出一些边界判断以及合法性的错误反馈</p>
+<p>时间复杂度：（省流：平均n/2，时间复杂度O（n））<br>
+<img src="https://daonan233.github.io/post-images/1668133655527.png" alt="" loading="lazy"></p>
+<p><strong>顺序表的基本操作：删除</strong><br>
+<img src="https://daonan233.github.io/post-images/1668133681214.png" alt="" loading="lazy"></p>
+<p>（第i个元素在顺序表里面是L.data[i-1])</p>
+<p>1.为什么这里的e要加引用符号？<br>
+因为这样才能把参数e 带回来，加了引用符号后，函数里的e和main函数里的e在内存中<br>
+占同一个位置，后面输出e的时候才能把e输出出来，否则就还是原来初值的e。</p>
+<p>时间复杂度：O(n)<br>
+<img src="https://daonan233.github.io/post-images/1668133708922.png" alt="" loading="lazy"><br>
+<br><br>
+<img src="https://daonan233.github.io/post-images/1668133736331.png" alt="" loading="lazy"></p>
+<p><strong>顺序表的基本操作：查找</strong></p>
+<p>1.GetElem(L,i)， 按位查找操作</p>
+<p>1.1若为静态分配的顺序表，其实就直接返回L.data[i-1]<br>
+<img src="https://daonan233.github.io/post-images/1668133767213.png" alt="" loading="lazy"></p>
+<p>1.2若为动态分配的顺序表，一样<br>
+<img src="https://daonan233.github.io/post-images/1668133792533.png" alt="" loading="lazy"></p>
+<p>这俩的时间复杂度都为O(1)</p>
+<p>2.LocateElem(L,e)，按值查找操作<br>
+<img src="https://daonan233.github.io/post-images/1668133810607.png" alt="" loading="lazy"></p>
+<p>3.顺序表的优缺点：<br>
+<img src="https://daonan233.github.io/post-images/1668133868453.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668133875153.png" alt="" loading="lazy"></p>
+<p>（随机存取，顺序存储，在物理上连续存放）<br>
+<br><br>
+<br></p>
+<hr>
+<br>
+<br>
+<h2 id="单链表">单链表</h2>
+<p><strong>1.用代码定义一个单链表：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134271056.png" alt="" loading="lazy"></p>
+<p>然鹅我们书里面是这样定义的，更加简洁：<br>
+<img src="https://daonan233.github.io/post-images/1668134303220.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668134319767.png" alt="" loading="lazy"></p>
+<p>强调是一个单链表：使用LinkList<br>
+强调是一个结点：使用LNode*</p>
+<p>！！！LinkList等价于Lnode *  ！！！</p>
+<p><strong>2.初始化一个不带头结点的单链表</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134347520.png" alt="" loading="lazy"></p>
+<p>这里，要判断单链表是否为空，就用L==NULL是否为真</p>
+<p><strong>3.初始化带头结点的单链表：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134365619.png" alt="" loading="lazy"></p>
+<p>用头结点指向的next域判断是否要成为头结点<br>
+L-&gt;next == NULL</p>
+<p>大家都用带头结点的！头结点的下一个结点才开始存储数据</p>
+<p><strong>4.尾插法单链表按位序插入删除（带头结点的）</strong></p>
+<p>ListInsert(&amp;L,I,e) :插入操作。在L的第i个位置上插入指定元素e。<br>
+其实也就是找到第i-1个结点，将新结点插入其后<br>
+<img src="https://daonan233.github.io/post-images/1668134396214.png" alt="" loading="lazy"></p>
+<p>《注意倒二倒三行不能颠倒哦》<br>
+这个是尾插法<br>
+顺序：0.让p指针依次往后扫描 注意循环找到第i-1个结点<br>
+1.新创造一个结点s，给s申请内存<br>
+2.把e的值赋给s的数据域<br>
+3.p的next域赋值给s的next域<br>
+4.把结点s连到p的next上（其实3、4相当于在p后面生成了一个s。但是p是渣男，刚来就要走了）<br>
+5.返回true，表示创建成功</p>
+<p><strong>4.5 尾插法单链表按位序插入删除（不带头结点）</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134428552.png" alt="" loading="lazy"></p>
+<p>更麻烦，第一个结点的情况需要单独拿出来考虑，这个略 大家要注意考试两个都会考，但是一般默认带头结点的</p>
+<p>上面这俩都是尾插法，时间复杂度都是O(n)</p>
+<p><strong>5.指定结点的前插操作：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134451881.png" alt="" loading="lazy"></p>
+<p><strong>6.按位序删除（带头结点）：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134467214.png" alt="" loading="lazy"></p>
+<p>原理和插入差不多<br>
+主要是最后三点：<br>
+0.p在挨个搜索<br>
+1.让新定义的q指向被删除的结点的前一个结点的next域<br>
+2.用e返回q的data域<br>
+3.q的next域赋给p的next域（和插入相反）</p>
+<p><strong>7.指定结点的删除：（带头结点）</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134484463.png" alt="" loading="lazy"></p>
+<p><strong>8.按位查找</strong></p>
+<p><strong>9.建立一个单链表（头插，尾插）</strong><br>
+<strong>9.1 尾插法建立单链表</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134504101.png" alt="" loading="lazy"></p>
+<p>这里while里面的操作是这样的：<br>
+（s的意思是新申请的结点，r的意思是始终指向表尾的尾结点指针（这个重要））<br>
+1.给新结点s申请一个空间<br>
+2.把x的值赋给该新申请节点s的数据域<br>
+3.s的位置给r的next域<br>
+4.s成为新的表尾，r指向s结点</p>
+<p>注意，最开始的L的next域可以不指向NULL(不会指向脏数据），但是肯定可以加上，也建议加上</p>
+<p><strong>9.2头插法建立单链表</strong></p>
+<p>去掉这一句就可能指向内存里的脏数据<br>
+注意：头插法可以用于链表的逆置！<br>
+顺序：<br>
+1.给新结点s申请空间<br>
+2.x的值赋给s的data域<br>
+3.L的next域赋给s的next域<br>
+4.s成为L的next域</p>
+<p><strong>单链表的优缺点：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134568902.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668134583609.png" alt="" loading="lazy"></p>
+<hr>
+<h2 id="循环链表">循环链表</h2>
+<p><strong>一丢丢小小的差别：循环单链表的表尾结点的next指针指向头结点</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134869298.png" alt="" loading="lazy"></p>
+<p>另外一个不一样的点！<br>
+单链表从一个结点出发只能找到后续的各个节点<br>
+循环单链表从一个结点出发可以找到其他任何一个结点<br>
+（从头结点找到尾部，时间复杂度为O（n）<br>
+（从尾部找到头部，时间复杂度为O（1）</p>
+<p><strong>1.循环双链表的初始化；</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134888036.png" alt="" loading="lazy"></p>
+<p><strong>2.双链表的插入</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134902622.png" alt="" loading="lazy"><br>
+<strong>3.删除</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134921263.png" alt="" loading="lazy"><br>
+<strong>总结：</strong><br>
+<img src="https://daonan233.github.io/post-images/1668134936873.png" alt="" loading="lazy"></p>
+<hr>
+<h2 id="双链表">双链表</h2>
+<p><img src="https://daonan233.github.io/post-images/1668135006464.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668135025710.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668135044248.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668135058649.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668135077326.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668135089806.png" alt="" loading="lazy"></p>
+<hr>
+<h2 id="静态链表">静态链表</h2>
+<hr>
+<h2 id="顺序表和链表的比较">顺序表和链表的比较</h2>
+<p><strong>Round  1：逻辑结构</strong><br>
+都属于线性表，都是数据结构</p>
+<p><strong>Round 2 ：优缺点比较</strong></p>
+<p>顺序表：顺序存储<br>
+优点：支持随机存取，存储密度高<br>
+缺点：大片连续空间分配不容易，改变容量不方便</p>
+<p>链表：链式存储<br>
+优点：离散的小空间分配方便，改变容量方便<br>
+缺点：不可随机存取，存储密度低</p>
+<p><strong>Round 3 ：基本操作</strong></p>
+<p>创销、增删改查</p>
+<p>创：<br>
+顺序表：1.需要预分配大片连续空间<br>
+2.若为静态分配，则容量不可改变<br>
+3.若为动态分配，容量可改变，但需要移动大量元素，时间代价高</p>
+<p>链表：只需要分配一个头结点（也可以不要头结点，只声明一个头指针）方便后面拓展</p>
+<p>显然链表灵活性优于顺序表</p>
+<p>销：<br>
+顺序表：1.修改length=0（一个标志而已）<br>
+2.1静态分配：系统自动回收空间<br>
+2.2动态分配：需要手动free ，free(L.data)（malloc在堆区申请的空间）</p>
+<p>链表：依次删除各个结点（free）</p>
+<p>增删：</p>
+<p>顺序表：插入/删除元素要将后续元素都后移、前移。<br>
+时间复杂度O(n)，时间开销主要来自于移动元素。<br>
+（若数据元素很大，则移动的时间代价很高）</p>
+<p>链表：插入删除元素只需要修改指针即可<br>
+时间复杂度O(n)，时间开销主要来自于查找目标元素<br>
+（查找元素的时间代价更低）</p>
+<p>所以链表的增删效率更高！</p>
+<p>查：</p>
+<p>顺序表：按位查找：O(1)<br>
+按值查找：O(n)，若表内元素有序，可在O（log2n）时间内找到</p>
+<p>链表：按位查找：O(n)<br>
+按值查找：O(n)</p>
+<p>顺序表的效率更高！</p>
+<p>总结：<br>
+<img src="https://daonan233.github.io/post-images/1668135215569.png" alt="" loading="lazy"><br>
+<img src="https://daonan233.github.io/post-images/1668135227908.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+</feed>

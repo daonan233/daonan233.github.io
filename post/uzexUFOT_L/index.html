@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    Daonan&#39;s Blog
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="道难">
+<meta name="description" content="Not interested in me at all.">
+<meta name="keywords" content="daonan">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://daonan233.github.io/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+    
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://daonan233.github.io">
+                    Daonan&#39;s Blog
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="https://daonan233.github.io">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="https://daonan233.github.io/archives">
+                        目录
+                    </a>
+                    
+                    <a class="menu-item" href="https://daonan233.github.io/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="https://daonan233.github.io/post/about">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1739588885170" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://daonan233.github.io">
+                            Daonan&#39;s Blog
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1739588885170" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="https://daonan233.github.io">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="https://daonan233.github.io/archives">
+                            目录
+                        </a>
+                        
+                        <a class="menu-item" href="https://daonan233.github.io/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="https://daonan233.github.io/post/about">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                算法回顾笔记
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            Daonan's Blog
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2025-02-15</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">9.1
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">2528</a></span>
+                                        
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                        <div class="post-content">
+                            <p><a href="https://www.bilibili.com/video/BV1bP411c7oJ/?spm_id_from=333.999.0.0&amp;vd_source=1fdd24a8b5cf89829b0ae5705060f0ed">来源：灵茶山艾府-基础算法精讲</a></p>
+<h3 id="01-两数之和三数之和">01 两数之和，三数之和</h3>
+<h4 id="1-两数之和">1、两数之和</h4>
+<figure data-type="image" tabindex="1"><img src="https://daonan233.github.io/post-images/1737039210980.png" alt="" loading="lazy"></figure>
+<ul>
+<li>
+<p>问题描述：在有序数组中找俩数（唯一）使得两数之和等于target</p>
+</li>
+<li>
+<p>问题思考：如果用暴力的话，时间复杂度为O(n²），现在我们要求用O(n)的方法去做，那么就想到利用原序列有序的这个条件（如果暴力就没用到，我随便一个序列也可以）</p>
+</li>
+<li>
+<p><em>（其实无序的话你开始排个序就好了）</em></p>
+</li>
+</ul>
+<p>利用<strong>有序</strong>，我们就可以发现可以去掉一些一定不符合的数字。比如最小的2+8&gt;9了，说明8跟谁都不能合成target9，所以去掉8，右指针向左移动。这时候我们再看第二大的6，第二大的6+2&lt;9，说明2跟谁都不能合成target了，所以去掉2，左指针向右移动。</p>
+<p>所以我们可以发现，这样就有一种双指针的方法，把最后的答案区间锁定在左右指针之间。（当前最小的数和当前最大的数加起来跟目标比一比）注意：只有有序的数组才能使用这个算法。</p>
+<ul>
+<li><strong>算法核心：</strong></li>
+</ul>
+<ol>
+<li>
+<p>while（left &lt; right)</p>
+</li>
+<li>
+<p>如果左右指针的数合起来刚好等于target，那就返回结果</p>
+</li>
+<li>
+<p>如果...大于target，那么右指针向左移动一格</p>
+</li>
+<li>
+<p>如果...小于target，那么左值真向左移动一格</p>
+</li>
+</ol>
+<h4 id="2-三数之和变异版两数之和">2、三数之和（变异版两数之和）</h4>
+<figure data-type="image" tabindex="2"><img src="https://daonan233.github.io/post-images/1737039321045.png" alt="" loading="lazy"></figure>
+<p>这个也要有序！所以一开始上来就给这个数组排序。</p>
+<p>这题其实也可以转化成两数之和，我们枚举nums[i]，然后让newTarget = target - nums[i] ，这样就变成了前面的n次的两数之和。</p>
+<p>然后题目要求要去除同样的三元组（比如如果有两个-1都满足，那么-1可能会出现两次）这种情况下不能去重（因为可能两个-1都要用到），那么怎么办呢？既然说三元组和组内的顺序不重要，那么我们就人为规定一个顺序（i&lt;j&lt;k)。然后如果下一个数字和当前这个数字是相同的，那么就跳过。</p>
+<figure data-type="image" tabindex="3"><img src="https://daonan233.github.io/post-images/1737039362307.png" alt="" loading="lazy"></figure>
+<h3 id="02-承最多水的容器-接雨水">02 承最多水的容器  接雨水</h3>
+<h4 id="11-承接最多水的容器">11、承接最多水的容器</h4>
+<figure data-type="image" tabindex="4"><img src="https://daonan233.github.io/post-images/1737039379929.png" alt="" loading="lazy"></figure>
+<ul>
+<li>问题描述：这就不描述了，看图就能理解。额外的提示是这题如果用n²会超时，所以肯定不能模拟啦</li>
+<li>问题思考：其实这题的想法还是双指针，左右指针向中间移动，哪条短就移动谁（不能让人家长的又变短宽度又变窄吧，那一定更小了），然后每次移动更新最大值。一样长就移动哪个都可以。</li>
+<li>每次花费O(1)的时间就去掉了一根线，所以总的时间复杂度是O(n)</li>
+</ul>
+<h4 id="42-接雨水">42、接雨水</h4>
+<figure data-type="image" tabindex="5"><img src="https://daonan233.github.io/post-images/1737039385230.png" alt="" loading="lazy"></figure>
+<p>问题描述：这个也没啥好说的</p>
+<p>问题思考：按单位来算，这个格子所能承的水，左边取决于左边的最大高度，右边取决于右边的最大高度，两个高度取最小值，然后减去这个位置的格子高度，就是这个位置所承接的水的数量</p>
+<p>算法：开两个额外数组，一个存最左边到i的最大高度（前缀最大值），一个存i到最右边的最大高度（后缀最大值）</p>
+<p>时间复杂度：都是一次遍历，所以O(n)</p>
+<p>优化：如果前缀最大值比后缀最大值小，那么这个位置能装的量就是前缀最大值，并且向右扩展；如果后缀最大值比前缀最大值小，那么这个位置能装的量就是后缀最大值，并且向左扩展（没太看懂）</p>
+<h3 id="03-滑动窗口问题">03 滑动窗口问题</h3>
+<h4 id="209-长度最小的子数组">209、长度最小的子数组</h4>
+<figure data-type="image" tabindex="6"><img src="https://daonan233.github.io/post-images/1739588516717.png" alt="" loading="lazy"></figure>
+<ul>
+<li>问题描述：一个正整数序列（非有序）和一个正整数target，在正整数序列中找出满足和≥target的连续子数组，并返回长度，没有返回0。</li>
+<li>问题思考：利用数组里面都是正整数的性质，保留上一次计算的结果，比如如果四个数大于target，那么五个数也会大于target。所以我们得到 一串大于等于target的时候，这时候我们让左端点向右移动来缩小，看缩小后还是不是大于target。所以我们就得到了一个方法：枚举右端点，缩小左端点，然后就能找到最小的数组了。</li>
+<li>时间复杂度：O(n)（为什么两层循环还是o(n)呢？因为其实左指针总共就动了n次，没有每次右指针向前他就从头开始，而是从当前位置继续）</li>
+</ul>
+<figure data-type="image" tabindex="7"><img src="https://daonan233.github.io/post-images/1739588642881.png" alt="" loading="lazy"></figure>
+<p>具体解释：还是设左右指针，for循环遍历右指针，然后要把当前遍历到的值新加到总和s里面去，left是不用更新的，然后开始向左移动，移动到刚好大于等于target就停止。（这边为什么14行要加1？自己假设一下left和right指向同一个，那么这时候长度是1）然后更新最小长度。最后判定一下最小长度如果大于n，那么就说明全部加起来都不到target，返回0.</p>
+<h3 id="04-二分查找-红蓝染色法">04 二分查找 红蓝染色法</h3>
+<h4 id="34-在排序数组中查找元素的第一个和最后一个位置">34、在排序数组中查找元素的第一个和最后一个位置</h4>
+<p>这边有个小例子，注意这里的左右边界（L、M）都是<strong>闭区间</strong>！所以更新的时候，<em>L=M+1，R=M-1</em>。不这么弄最后L=M没找到的时候和找到的时候都是一样的，会进入死循环。</p>
+<figure data-type="image" tabindex="8"><img src="https://daonan233.github.io/post-images/1739588684085.png" alt="" loading="lazy"></figure>
+<p>L-1指向的一定是红色，R+1指向的一定是蓝色</p>
+<figure data-type="image" tabindex="9"><img src="https://daonan233.github.io/post-images/1739588699873.png" alt="" loading="lazy"></figure>
+<p>如果没找到的话，L是会一直向右移动的，最后L等于数组长度（不用-1！）</p>
+<p>ps：这边（left+right)/2 在java和c++可能会有溢出的问题，改写成  <em>left + ( right - left ) / 2</em>，这其实就是个二分的问题。</p>
+<figure data-type="image" tabindex="10"><img src="https://daonan233.github.io/post-images/1739588719114.png" alt="" loading="lazy"></figure>
+<p>有＞、≥、＜、≤等多种考法，但是其实方法上是一样的：</p>
+<ul>
+<li>＞x等价于 ≥ x+1（对于整数来说）</li>
+<li>&lt; x等价于 ≥ x的那个数的左边</li>
+<li>≤ x等价于＞x的那个数的左边</li>
+</ul>
+<p>最后，让我们来看这道题：</p>
+<figure data-type="image" tabindex="11"><img src="https://daonan233.github.io/post-images/1739588738615.png" alt="" loading="lazy"></figure>
+<ul>
+<li>问题描述：给一个非递减<strong>整数</strong>数组，在数组里面找目标值的开始位置和结束位置，也就是找小于等于他和大于等于他位置。</li>
+<li>问题思路：已经全写上面了。</li>
+</ul>
+<h3 id="05-二分查找-数组峰值-搜索旋转排序数组">05 二分查找 数组峰值 搜索旋转排序数组</h3>
+<h4 id="162-寻找峰值">162、寻找峰值</h4>
+<figure data-type="image" tabindex="12"><img src="https://daonan233.github.io/post-images/1739588750674.png" alt="" loading="lazy"></figure>
+<ul>
+<li>问题描述：在一个整数数组里面找到一个数字比其左右相邻的数都大，这个数字就称为峰值元素。用o(logn)的时间找到任何一个峰值元素所在位置就行。</li>
+<li>问题思路：一样用二分的方法，说实话我没咋看懂啊，写当然我会写</li>
+</ul>
+<figure data-type="image" tabindex="13"><img src="https://daonan233.github.io/post-images/1739588762058.png" alt="" loading="lazy"></figure>
+<h4 id="153-寻找旋转排序数组中的最小值">153、寻找旋转排序数组中的最小值</h4>
+<figure data-type="image" tabindex="14"><img src="https://daonan233.github.io/post-images/1739588777420.png" alt="" loading="lazy"></figure>
+<h3 id="06-反转链表">06 反转链表</h3>
+<h4 id="206-反转链表">206、反转链表</h4>
+<p>要修改一个指针的指向，只用一个指针cur表示当前遍历到的节点是不够的，因为重新指完方向后，cur原本的next就找不到了。所以我们还需要一个nxt指针在重新指方向之前保存cur原来的next是谁。</p>
+<p>然后做法就是把cur更新成nxt，nxt更新成cur-&gt;next（新的cur）</p>
+<figure data-type="image" tabindex="15"><img src="https://daonan233.github.io/post-images/1739588797426.png" alt="" loading="lazy"></figure>
+<ul>
+<li>时间复杂度：O(n)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<h4 id="92-反转链表ii">92、反转链表II</h4>
+<p>除了整个链表反转的，也有部分链表反转的。这种问题在遇到一些特殊情况的时候，是要记得看第一个头节点要不要进行反转的。如果需要头节点一起反转的话，就设置一个dummyNode（哨兵节点）。</p>
+<figure data-type="image" tabindex="16"><img src="https://daonan233.github.io/post-images/1739588820852.png" alt="" loading="lazy"></figure>
+<h3 id="07-动态规划入门">07 动态规划入门</h3>
+<h4 id="198-打家劫舍">198、打家劫舍</h4>
+<figure data-type="image" tabindex="17"><img src="https://daonan233.github.io/post-images/1739588835071.png" alt="" loading="lazy"></figure>
+<ul>
+<li>
+<p>问题描述：小偷偷房子里的钱，两间相邻的房子都被偷了的情况下小偷就会被抓。已知每个房子的钱的数量数组，求小偷偷的钱最多能多少。</p>
+</li>
+<li>
+<p>问题思路：把一个大问题变成规模更小的子问题。从第一个房子或者最后一个房子开始思考（因为收到的约束最小），现在我们从最后一个房子开始考虑选或者不选。</p>
+<ol>
+<li>如果选，那么问题就变成n-1个房子的问题</li>
+<li>如果不选，那么问题就变成n-2个房子的问题（因为n-1就选不了了）</li>
+</ol>
+</li>
+</ul>
+<p>所以我们就可以抽象出来一个搜索树</p>
+<figure data-type="image" tabindex="18"><img src="https://daonan233.github.io/post-images/1739588857778.png" alt="" loading="lazy"></figure>
+<p>然后我们再抽象一下，写出递归公式</p>
+<figure data-type="image" tabindex="19"><img src="https://daonan233.github.io/post-images/1739588866366.png" alt="" loading="lazy"></figure>
+<p>dfs(i-1)就是第i个房子不选的情况，dfs(i-2)+nums[i]就是第i个房子选的情况。</p>
+<p>但是我们如果就这么简单写回溯代码的话，因为递归的时间是O(nlogn)，这么写会超时，所以我们需要进行简化（剪枝）。比如我们这边2-1-0-0的dfs(2)算了两遍，所以我们可以进行简化。</p>
+<p>怎么剪枝呢，我们可以创建一个memo数组或者哈希表。这样当我们计算到重复的值的时候，就可以直接返回memo里面保存的结果了。这样我们就成功把时间复杂度降低到了O(n)</p>
+<figure data-type="image" tabindex="20"><img src="https://daonan233.github.io/post-images/1739588877931.png" alt="" loading="lazy"></figure>
+<pre><code class="language-java">class Solution {
+    private int[] nums, memo;
+    public int rob(int[] nums) {
+        this.nums = nums;
+        int n = nums.length;
+        memo = new int[n];
+        Arrays.fill(memo, -1); // -1 表示没有计算过
+        return dfs(n - 1); // 从最后一个房子开始思考
+    }
+    // dfs(i) 表示从 nums[0] 到 nums[i] 最多能偷多少
+    private int dfs(int i) {
+        if (i &lt; 0) { // 递归边界（没有房子）
+            return 0;
+        }
+        if (memo[i] != -1) { // 之前计算过
+            return memo[i];
+        }
+        int res = Math.max(dfs(i - 1), dfs(i - 2) + nums[i]);
+        memo[i] = res; // 记忆化：保存计算结果
+        return res;
+    }
+}
+</code></pre>
+<p>这边时间复杂度怎么算呢，就是用状态个数乘上单个状态所需要的计算时间。</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#01-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C">01 两数之和，三数之和</a>
+<ul>
+<li><a href="#1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C">1、两数之和</a></li>
+<li><a href="#2-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C%E5%8F%98%E5%BC%82%E7%89%88%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C">2、三数之和（变异版两数之和）</a></li>
+</ul>
+</li>
+<li><a href="#02-%E6%89%BF%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8-%E6%8E%A5%E9%9B%A8%E6%B0%B4">02 承最多水的容器  接雨水</a>
+<ul>
+<li><a href="#11-%E6%89%BF%E6%8E%A5%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8">11、承接最多水的容器</a></li>
+<li><a href="#42-%E6%8E%A5%E9%9B%A8%E6%B0%B4">42、接雨水</a></li>
+</ul>
+</li>
+<li><a href="#03-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%97%AE%E9%A2%98">03 滑动窗口问题</a>
+<ul>
+<li><a href="#209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84">209、长度最小的子数组</a></li>
+</ul>
+</li>
+<li><a href="#04-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE-%E7%BA%A2%E8%93%9D%E6%9F%93%E8%89%B2%E6%B3%95">04 二分查找 红蓝染色法</a>
+<ul>
+<li><a href="#34-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE">34、在排序数组中查找元素的第一个和最后一个位置</a></li>
+</ul>
+</li>
+<li><a href="#05-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE-%E6%95%B0%E7%BB%84%E5%B3%B0%E5%80%BC-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84">05 二分查找 数组峰值 搜索旋转排序数组</a>
+<ul>
+<li><a href="#162-%E5%AF%BB%E6%89%BE%E5%B3%B0%E5%80%BC">162、寻找峰值</a></li>
+<li><a href="#153-%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC">153、寻找旋转排序数组中的最小值</a></li>
+</ul>
+</li>
+<li><a href="#06-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8">06 反转链表</a>
+<ul>
+<li><a href="#206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8">206、反转链表</a></li>
+<li><a href="#92-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8ii">92、反转链表II</a></li>
+</ul>
+</li>
+<li><a href="#07-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%85%A5%E9%97%A8">07 动态规划入门</a>
+<ul>
+<li><a href="#198-%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D">198、打家劫舍</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>Daonan's Blog</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://daonan233.github.io/post/uzexUFOT_L/">https://daonan233.github.io/post/uzexUFOT_L/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://daonan233.github.io/post/uzexUFOT_L/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://daonan233.github.io/post/uzexUFOT_L/&sharesource=qzone&title=算法回顾笔记&pics=https://daonan233.github.io/images/avatar.png?v=1739588885170&summary="><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://daonan233.github.io/post/uzexUFOT_L/&sharesource=weibo&title=算法回顾笔记 + " - " + &pic="https://daonan233.github.io/images/avatar.png?v=1739588885170 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://daonan233.github.io/post/yrURhD3Boc/">
+                                                                                                    Java 数据结构及其方法
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'Ov23liu2uvFxVfDDuG88',
+        clientSecret: '14c4b10d3808b9e4784d443fcc2e07484d127220',
+        repo: 'gittalk-comment',
+        owner: 'daonan233',
+        admin: ['daonan233'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        Daonan&#39;s Blog &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://open.gridea.dev" target="_blank">
+                                                Gridea
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.5
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+
+                    function LoadPlayer() {
+                        var music_array = [];
+                        
+                        music_array.push({
+                            name: 'Beautiful World',
+                            url: 'https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvYy83OWRmNjFlNTFlOTU2YzEwL0VSQnNsUjdsWWQ4Z2dIbTJBQUFBQUFBQlVCNjE2bE9DWTU4Q2hiX1k4eEtxRHc_ZT12TnN3ZG4.mp3',
+                            artist: '宇多田ヒカル',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVo0WVJfQldJbGQ0M3VZP2U9NDUyZXVG.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'One Last Kiss',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVERyNkdqaGJNZmxXVzMzP2U9MnRTQUVy.mp3',
+                            artist: '宇多田ヒカル',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVo0WVJfQldJbGQ0M3VZP2U9NDUyZXVG.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'すずめ',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVGxJWFFLdkJMdmtjOFlCP2U9WHdZRWh2.mp3',
+                            artist: 'Radwinps、十明',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVY1VXd2ZUE3b25WaU5DP2U9V3oxbGFL.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'Grand Escape',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVEs2RXR1bTlfZWF0a0x6P2U9aXdsT3k0.mp3',
+                            artist: 'Radwinps、三浦透子',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVVQ2QjFwMllVZXFPWlRoP2U9TVRZN0tJ.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '雪之泪 雨之音',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFBlZXVOSEVsVFZrNEcxP2U9RFFtMWoy.mp3',
+                            artist: '东京塔子',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUlvN1VpVFZOV2lodll0P2U9ZHhBOVBy.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '夜に駆ける',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFBlZXVOSEVsVFZrNEcxP2U9RFFtMWoy.mp3',
+                            artist: 'YOASOBI',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUlvN1VpVFZOV2lodll0P2U9ZHhBOVBy.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '群青',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVEgwSmdWZlJjRVd6Rm9iP2U9VHp2ZFJX.mp3',
+                            artist: 'YOASOBI',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUV1bFM4S0tvdEJuVG4xP2U9QkxJNXFF.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '怪物',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVGh2NkduVVNSMFc1bnZ2P2U9Q2EzUHdo.mp3',
+                            artist: 'YOASOBI',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVUJvSUhNN3BFdWVHcUFrP2U9bU5va3lt.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'satisfaction',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnUzVaQjliUlJIeXc5Zl83P2U9Y01EY0dR.mp3',
+                            artist: '初音ミク/kz(livetune)',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVC1qX0xQQjFfTFVJcElJP2U9T2hoVlpD.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: '夕日坂',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVFYxcjh4TkhXcEdVbG4xP2U9WUczUHJI.mp3',
+                            artist: '初音ミク/doriko',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVDVyRFM3QTRUblpkNTEwP2U9aXBMODNt.jpg',
+                        });
+                        
+                        music_array.push({
+                            name: 'アスノヨゾラ哨戒班',
+                            url: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnUzlDR3AxX3dNdHFrMDNzP2U9Y3RKQmtL.mp3',
+                            artist: 'Orangestar / IA',
+                            cover: 'https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaEJzbFI3bFlkOTVnVDIyX25INlZFODhzVHRrP2U9YVR0d2J4.png',
+                        });
+                        
+                        console.log(" MusicList: " + music_array);
+                        
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: music_array
+                        });
+                        
+                    }
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1739588885170);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+                
+                    <div id="tp-weather-widget" style="background: #666;display: flex;"></div>
+                    <script>
+                        (function(T, h, i, n, k, P, a, g, e) {
+                            g = function() {
+                                P = h.createElement(i);
+                                a = h.getElementsByTagName(i)[0];
+                                P.src = k;
+                                P.charset = "utf-8";
+                                P.async = 1;
+                                a.parentNode.insertBefore(P, a)
+                            };
+                            T["ThinkPageWeatherWidgetObject"] = n;
+                            T[n] || (T[n] = function() {
+                                (T[n].q = T[n].q || []).push(arguments)
+                            });
+                            T[n].l = +new Date();
+                            if (T.attachEvent) {
+                                T.attachEvent("onload", g)
+                            } else {
+                                T.addEventListener("load", g, false)
+                            }
+                        }(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))
+                    </script>
+                    <script>
+                        var wearther_margin = "10px 10px";
+                        
+                        wearther_margin = "70px 5px";
+                        
+                        tpwidget("init", {
+                            "flavor": "bubble",
+                            "location": "WX4FBXXFKE4F",
+                            "geolocation": "enabled",
+                            "position": "bottom-left",
+                            "margin": wearther_margin,
+                            "language": "zh-chs",
+                            "unit": "c",
+                            "theme": "chameleon",
+                            "uid": "UFC977E1C7",
+                            "hash": "213ad798bc472dc365da3a9d4a9ff115"
+                        });
+                        tpwidget("show");
+                    </script>
+                    
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
